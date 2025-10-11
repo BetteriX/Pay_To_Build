@@ -14,6 +14,20 @@ def main():
     #    print(f"{spec}: {value}")
 
     # print(part.cheapest_price)
+
+    pcpp = pypartpicker.Client()
+    page = 1
+
+    while True:
+        result = pcpp.get_part_search("ryzen 5", region="uk", page=page)
+
+        for part in result.parts:
+            print(part.name)
+
+        page += 1
+        if page > result.total_pages:
+            break
+
     print(mysql.connector.__version__)
 
     load_dotenv()
