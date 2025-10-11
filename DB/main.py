@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import pypartpicker
+import mysql.connector
 
 
 def main():
@@ -10,6 +11,7 @@ def main():
         print(f"{spec}: {value}")
 
     print(part.cheapest_price)
+    print(mysql.connector.__version__)
 
 
 if __name__ == "__main__":
