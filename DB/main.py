@@ -26,7 +26,7 @@ def safe_get_part(query, region="us", page=1, retries=3):
     return None
 
 
-def scarape_category(name: str):
+def scrape_category(name: str):
     page = 1
     region = "us"
     fname = f"{name.lower()}.csv"
