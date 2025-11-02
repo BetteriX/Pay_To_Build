@@ -2,14 +2,11 @@ package org.example.ui;
 
 public class CPU extends PCParts{
     int coreCount;
-    int threadCount;
-    int maxSuppMemory;
-    String coreClock;
-    String coreBoost;
-    String architecture;
-    String integratedG;
-    String socket;
+    float coreClock;
+    float coreBoost;
+    String microArchitecture;
     int TDP;
+    String graphic; //built in
 
 
 }
