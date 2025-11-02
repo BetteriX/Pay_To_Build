@@ -4,8 +4,11 @@ import java.util.List;
 
 public class Memory extends PCParts{
     //int speedInt; Possibly need it or not
-    String speed; //We can match with Motherboard supported speed
+    int speed;
+    int ddr;
+    String modules; //e.g. 2x16GB
+    float pricePRgb;
     List<String> color;
-    float voltage;
-    List<String> modules; //e.g. 2x16GB
+    float fwLatency;
+    float casLatency;
 }
