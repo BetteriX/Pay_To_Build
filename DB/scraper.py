@@ -5,26 +5,62 @@ import time
 import pypartpicker
 from pypartpicker.errors import CloudflareException, RateLimitException
 import random
+import mac
+import os
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 warnings.filterwarnings("ignore")
 
 client = pypartpicker.Client()
 attempt = 0
+interface = "wlp1s0"
+ssid = "eduroam"
+original_mac_address = mac.get_current_mac_address(interface)
 
 
-def safe_get_part(query, region="us", page=1):
-    global attempt
-    try:
-        return client.get_part_search(query, region=region, page=page)
-    except (CloudflareException, RateLimitException) as e:
-        attempt += 1
-        print(f"[{type(e).__name__}] Page {page} attempt {attempt}: {e}")
-        time.sleep(180)  # Változtatni kell még ezzen fixen
+def safe_get_part(query, region="us", page=1, max_retries=99):
+    """Fetch part info safely with retries, MAC rotation, and Wi-Fi reconnect."""
+    global attempt, client
+
+    for retry in range(max_retries):
+        try:
+            return client.get_part_search(query, region=region, page=page)
+
+        except (CloudflareException, RateLimitException) as e:
+            attempt += 1
+            print(f"[{type(e).__name__}] Page {page} attempt {attempt}: {e}")
+
+            # Rotate MAC
+            old_mac = mac.get_current_mac_address(interface)
+            print("[*] Old MAC address:", old_mac)
+
+            new_mac = mac.get_random_mac_address()
+            mac.change_mac_address(interface, new_mac)
+            print("[+] New MAC address:", new_mac)
+
+            # Reconnect Wi-Fi
+            mac.reconnect_wifi(interface, ssid)
+
+            # Recreate the pypartpicker client (new session)
+            client = pypartpicker.Client()
+            print("[*] Refreshed pypartpicker client after reconnect.")
+
+            # Wait before retry
+            print("Sleeping for 60 seconds before retry...")
+            time.sleep(10)
+
+            # os.system("clear")
+
+        except Exception as e:
+            print(f"[!] Unexpected error on page {page}: {e}")
+            time.sleep(10)
+
+    print(f"[!] Giving up after {max_retries} retries on page {page}")
     return None
 
 
 def scrape_category(name: str):
+    os.system("clear")
     page = 1
     region = "us"
     fname = f"{name.lower()}-image.csv"
@@ -34,8 +70,8 @@ def scrape_category(name: str):
 
             while True:
                 result = safe_get_part(name, region=region, page=page)
-                if not result or not result.parts:
-                    print("No more results or fetch failed — stopping.")
+                if not result:
+                    print(f"[!] Failed to fetch page {page}, skipping...")
                     break
 
                 print(f"{name}: === Page {page}/{result.total_pages} ===", end="\r")
@@ -51,7 +87,7 @@ def scrape_category(name: str):
                 if page >= result.total_pages:
                     break
                 page += 1
-                time.sleep(random.uniform(3, 10))  # Le kell tesztelni!!!
+                time.sleep(random.uniform(5, 10))  # 1, 3 - Túl gyorsan detektál
 
     except KeyboardInterrupt:
         print("\nScript stopped by user (Ctrl+C)!")
@@ -62,13 +98,13 @@ def scrape_category(name: str):
 def main():
     # Felkel sorolni még
     categories = [
-        # "Processor",
-        # "Memory",
-        "Internal Hard Drive",
-        "External Hard Drive",
-        "Video Card",
-        "Case Fan",
-        "Fan Controller",
+        # "Processor", # Got it
+        "Memory",  # Need now
+        # "Internal-Hard-Drive",
+        # "External-Hard-Drive",
+        # "Video-Card",
+        # "Case-Fan",
+        # "Fan-Controller",
     ]
 
     for word in categories:
