@@ -1,6 +1,5 @@
-package org.example.ui;
+package PayToBuild.Data;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class CPUCooler extends PCParts{

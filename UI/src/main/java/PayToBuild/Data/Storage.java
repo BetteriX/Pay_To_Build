@@ -1,4 +1,4 @@
-package org.example.ui;
+package PayToBuild.Data;
 
 public class Storage extends PCParts{
     String type; //SSD/HDD

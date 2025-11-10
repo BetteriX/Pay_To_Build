@@ -1,4 +1,4 @@
-package org.example.ui;
+package PayToBuild.Data;
 
 public class Case extends PCParts{
     String color;

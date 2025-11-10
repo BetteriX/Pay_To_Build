@@ -1,4 +1,4 @@
-package org.example.ui;
+package PayToBuild.Data;
 
 public class CPU extends PCParts{
     int coreCount;
