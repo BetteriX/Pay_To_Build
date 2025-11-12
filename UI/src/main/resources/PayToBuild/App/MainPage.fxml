@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainroot" prefHeight="430.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController" stylesheets="Main.css">
+<AnchorPane fx:id="mainroot" prefHeight="430.0" prefWidth="607.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
    <children>
       <Rectangle fx:id="bcrectangle" arcHeight="5.0" arcWidth="5.0" fill="#949ba1" height="61.0" layoutX="-18.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="625.0" />
       <Button fx:id="guidebutton" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#swaptoguide" text="Guide" />
