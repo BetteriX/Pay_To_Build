@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Memory extends PCParts{
@@ -12,7 +14,9 @@ public class Memory extends PCParts{
     float fwLatency;
     float casLatency;
 
-    public Memory(int speed, float casLatency, float fwLatency, List<String> color, float pricePRgb, String modules, int ddr) {
+    public Memory(String name, float price, URL url, int speed, int ddr, float pricePRgb, String modules, List<String> color, float fwLatency, float casLatency) {
+
+        super(name, price, url);
 
         if (modules == null || modules.isEmpty()) {
             modules = "";
@@ -43,11 +47,11 @@ public class Memory extends PCParts{
         }
 
         this.speed = speed;
-        this.casLatency = casLatency;
-        this.fwLatency = fwLatency;
-        this.color = color;
+        this.ddr = ddr;
         this.pricePRgb = pricePRgb;
         this.modules = modules;
-        this.ddr = ddr;
+        this.color = color;
+        this.fwLatency = fwLatency;
+        this.casLatency = casLatency;
     }
 }

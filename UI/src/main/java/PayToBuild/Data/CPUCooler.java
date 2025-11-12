@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CPUCooler extends PCParts{
@@ -8,7 +10,9 @@ public class CPUCooler extends PCParts{
     List<Float> noiseLevel;
     String color;
 
-    public CPUCooler(String color, List<Float> noiseLevel, int RPM, int size) {
+    public CPUCooler(String name, float price, URL url, int RPM, int size, List<Float> noiseLevel, String color) {
+
+        super(name, price, url);
 
         if (color == null || color.isEmpty()) {
             color = "";
@@ -26,9 +30,9 @@ public class CPUCooler extends PCParts{
             size = 0;
         }
 
-        this.color = color;
-        this.noiseLevel = noiseLevel;
         this.RPM = RPM;
         this.size = size;
+        this.noiseLevel = noiseLevel;
+        this.color = color;
     }
 }
