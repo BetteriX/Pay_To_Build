@@ -1,4 +1,4 @@
-package org.example.ui;
+package PayToBuild.App;
 
 import javafx.application.Application;
 
