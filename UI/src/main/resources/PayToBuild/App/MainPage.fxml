@@ -11,14 +11,18 @@
 
 <AnchorPane fx:id="mainroot" prefHeight="454.0" prefWidth="607.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
    <children>
-      <Rectangle fx:id="bcrectangle" arcHeight="5.0" arcWidth="5.0" fill="#949ba1" height="61.0" layoutX="-18.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="625.0" />
-      <Button fx:id="guidebutton" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#swaptoguide" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Guide" />
-      <Button fx:id="loginbutton" layoutX="521.0" layoutY="14.0" mnemonicParsing="false" onAction="#swaptologin" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Log In" />
-      <Label fx:id="toplabel" layoutX="147.0" layoutY="5.0" prefHeight="44.0" prefWidth="198.0" text="Pay To Build">
-         <font>
-            <Font name="Cambria" size="35.0" />
-         </font>
-      </Label>
+      <Group layoutX="-18.0" layoutY="-3.0">
+         <children>
+            <Rectangle fx:id="bcrectangle" arcHeight="5.0" arcWidth="5.0" fill="#949ba1" height="61.0" stroke="BLACK" strokeType="INSIDE" width="625.0" />
+            <Button fx:id="guidebutton" layoutX="458.0" layoutY="17.0" mnemonicParsing="false" onAction="#swaptoguide" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Guide" />
+            <Button fx:id="loginbutton" layoutX="539.0" layoutY="17.0" mnemonicParsing="false" onAction="#swaptologin" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Log In" />
+            <Label fx:id="toplabel" layoutX="165.0" layoutY="8.0" prefHeight="44.0" prefWidth="198.0" text="Pay To Build">
+               <font>
+                  <Font name="Cambria" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
       <ScrollBar fx:id="mainscroller" layoutX="586.0" layoutY="57.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="21.0" />
       <TitledPane fx:id="mainparts" animated="false" layoutX="14.0" layoutY="71.0" onMouseClicked="#expandmainparts" prefHeight="337.0" prefWidth="470.0" text=" Main Parts">
         <content>

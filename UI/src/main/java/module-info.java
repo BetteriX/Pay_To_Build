@@ -6,6 +6,7 @@ module org.example.ui {
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
     requires javafx.graphics;
+    requires javafx.base;
 
 
     exports PayToBuild.Data;
