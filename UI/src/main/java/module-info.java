@@ -4,6 +4,7 @@ module org.example.ui {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
 
     exports PayToBuild.Data;
