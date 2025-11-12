@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+
 public class CPU extends PCParts{
     int coreCount;
     float coreClock;
@@ -8,7 +10,9 @@ public class CPU extends PCParts{
     int TDP;
     String graphic; //built in
 
-    public CPU(int coreCount, float coreClock, float coreBoost, String microArchitecture, int TDP, String graphic) {
+    public CPU(String name, float price, URL url, int coreCount, float coreClock, float coreBoost, String microArchitecture, int TDP, String graphic) {
+
+        super(name, price, url);
 
         if (microArchitecture == null || microArchitecture.isEmpty()) {
             microArchitecture = "";

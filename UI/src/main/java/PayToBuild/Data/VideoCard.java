@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VideoCard extends PCParts{
@@ -10,7 +12,9 @@ public class VideoCard extends PCParts{
     int length;
     String chipset;
 
-    public VideoCard(int memory, List<String> color, int coreClock, int boostClock, int length, String chipset) {
+    public VideoCard(String name, float price, URL url, int memory, List<String> color, int coreClock, int boostClock, int length, String chipset) {
+
+        super(name, price, url);
 
         if (color == null) {
             color = new ArrayList<>();
