@@ -62,7 +62,7 @@ def safe_get_part(query, region="us", page=1, max_retries=99):
 def scrape_category(name: str):
     os.system("clear")
     page = 1
-    region = "us"
+    region = "uk"
     fname = f"{name.lower()}-image.csv"
     try:
         with open(fname, "w", encoding="utf-8") as f:
@@ -87,7 +87,7 @@ def scrape_category(name: str):
                 if page >= result.total_pages:
                     break
                 page += 1
-                time.sleep(random.uniform(5, 10))  # 1, 3 - Túl gyorsan detektál
+                time.sleep(random.uniform(5, 10))
 
     except KeyboardInterrupt:
         print("\nScript stopped by user (Ctrl+C)!")
@@ -99,7 +99,7 @@ def main():
     # Felkel sorolni még
     categories = [
         # "Processor", # Got it
-        "Memory",  # Need now
+        "memory",  # Need now
         # "Internal-Hard-Drive",
         # "External-Hard-Drive",
         # "Video-Card",
@@ -107,8 +107,8 @@ def main():
         # "Fan-Controller",
     ]
 
-    for word in categories:
-        scrape_category(word)
+    # for word in categories:
+    #    scrape_category(word)
 
 
 if __name__ == "__main__":
