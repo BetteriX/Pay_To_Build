@@ -11,15 +11,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class MainController {
     private Stage stage;
     private Parent root;
     private Scene scene;
+    @FXML
+    private AnchorPane mainroot;
     @FXML
     private Button guidebutton;
     @FXML
@@ -44,6 +48,16 @@ public class MainController {
     private Button cpucoolerbutton;
     @FXML
     private Button casebutton;
+
+    /*@FXML
+    public void initialize() {
+        mainparts.sceneProperty().addListener((obs, oldScene, newScene) -> {
+            mainparts.layoutXProperty().unbind();
+            if (newScene != null) {
+                mainparts.layoutXProperty().bind(newScene.widthProperty().divide(2));
+            }
+        });
+    }*/
 
     public void swaptoguide(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("GuidePage.fxml"));
