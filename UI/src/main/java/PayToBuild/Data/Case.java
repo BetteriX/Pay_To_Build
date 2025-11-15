@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+
 public class Case extends PCParts{
     String color;
     String type;
@@ -8,7 +10,9 @@ public class Case extends PCParts{
     String sidePanel;
     int internal35bay;
 
-    public Case(String color, String type, int psuInWatt, float externalVolume, String sidePanel, int internal35bay) {
+    public Case(String name, float price, URL url, String color, String type, int psuInWatt, float externalVolume, String sidePanel, int internal35bay) {
+
+        super(name, price, url);
 
         if (color == null || color.isEmpty()) {
             color = "";

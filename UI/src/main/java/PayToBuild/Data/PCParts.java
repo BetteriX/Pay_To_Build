@@ -7,25 +7,18 @@ public class PCParts {
     float price;
     URL url;
 
-    public PCParts(String name, URL url, float price) {
+    public PCParts(String name, float price, URL url) {
 
         if (name == null || name.isEmpty()) {
             name = "";
         }
 
-        if (url == null) {
-            url = "";
-        }
-
-        if (price == null) {
+        if (price < 0) {
             price = 0;
         }
 
         this.name = name;
-        this.url = url;
         this.price = price;
-
-
-
+        this.url = url;
     }
 }

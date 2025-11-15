@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+
 public class Storage extends PCParts{
     String type; //SSD/HDD
     String formFactor;
@@ -8,7 +10,9 @@ public class Storage extends PCParts{
     int cache;
     String driveInterface;
 
-    public Storage(String type, String formFactor, int capacity, float pricePRgb, int cache, String driveInterface) {
+    public Storage(String name, float price, URL url, String type, String formFactor, int capacity, float pricePRgb, int cache, String driveInterface) {
+
+        super(name, price, url);
 
         if (type == null || type.isEmpty()) {
             type = "";

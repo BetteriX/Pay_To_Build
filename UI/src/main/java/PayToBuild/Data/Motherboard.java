@@ -1,5 +1,7 @@
 package PayToBuild.Data;
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Motherboard extends PCParts {
@@ -9,7 +11,9 @@ public class Motherboard extends PCParts {
     String formFactor; //like ATX, Micro ATX
     List<String> color;
 
-    public Motherboard(List<String> color, String formFactor, int maxSuppMemory, int memorySlots, String socket) {
+    public Motherboard(String name, float price, URL url, String socket, int memorySlots, int maxSuppMemory, String formFactor, List<String> color) {
+
+        super(name, price, url);
 
         if (color == null) {
             color = new ArrayList<>();
@@ -31,10 +35,10 @@ public class Motherboard extends PCParts {
             memorySlots = 0;
         }
 
-        this.color = color;
-        this.formFactor = formFactor;
-        this.maxSuppMemory = maxSuppMemory;
-        this.memorySlots = memorySlots;
         this.socket = socket;
+        this.memorySlots = memorySlots;
+        this.maxSuppMemory = maxSuppMemory;
+        this.formFactor = formFactor;
+        this.color = color;
     }
 }
