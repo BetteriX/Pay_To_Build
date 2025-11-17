@@ -7,66 +7,78 @@ from pypartpicker.errors import CloudflareException, RateLimitException
 import random
 import mac
 import os
+import csv
+import json
+from requests_html import HTMLSession
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 warnings.filterwarnings("ignore")
 
-client = pypartpicker.Client()
-attempt = 0
+# Global client
+client = pypartpicker.Client(no_js=True)
 interface = "wlp1s0"
-ssid = "eduroam"
-original_mac_address = mac.get_current_mac_address(interface)
+ssid = "Telekom-5A4A71"
+
+session = HTMLSession()
+
+with open("headers.json", "r", encoding="utf-8") as f:
+    HEADER_POOL = json.load(f)
 
 
-def safe_get_part(query, region="us", page=1, max_retries=99):
-    """Fetch part info safely with retries, MAC rotation, and Wi-Fi reconnect."""
-    global attempt, client
+def Get_Random_Header():
+    return random.choice(HEADER_POOL)
 
-    for retry in range(max_retries):
+
+def rotate_mac_and_reconnect():
+    """Rotate MAC address and reconnect Wi-Fi."""
+    old_mac = mac.get_current_mac_address(interface)
+    print("[*] Old MAC address:", old_mac)
+
+    new_mac = mac.get_random_mac_address()
+    mac.change_mac_address(interface, new_mac)
+    print("[+] New MAC address:", new_mac)
+
+    mac.reconnect_wifi(interface, ssid)
+    print("[*] Reconnected Wi-Fi")
+
+
+def safe_get_part(query, region="us", page=1, max_retries=10):
+    """Fetch part info safely with retries and MAC rotation."""
+    global client
+    attempt = 0
+
+    while attempt < max_retries:
         try:
             return client.get_part_search(query, region=region, page=page)
 
         except (CloudflareException, RateLimitException) as e:
             attempt += 1
             print(f"[{type(e).__name__}] Page {page} attempt {attempt}: {e}")
-
-            # Rotate MAC
-            old_mac = mac.get_current_mac_address(interface)
-            print("[*] Old MAC address:", old_mac)
-
-            new_mac = mac.get_random_mac_address()
-            mac.change_mac_address(interface, new_mac)
-            print("[+] New MAC address:", new_mac)
-
-            # Reconnect Wi-Fi
-            mac.reconnect_wifi(interface, ssid)
-
-            # Recreate the pypartpicker client (new session)
-            client = pypartpicker.Client()
-            print("[*] Refreshed pypartpicker client after reconnect.")
-
-            # Wait before retry
-            print("Sleeping for 60 seconds before retry...")
-            time.sleep(10)
-
-            # os.system("clear")
+            rotate_mac_and_reconnect()
+            client = pypartpicker.Client(no_js=True)  # reset client after reconnect
+            sleep_time = random.uniform(10, 20)
+            print(f"Sleeping for {sleep_time:.1f} seconds before retry...")
+            time.sleep(sleep_time)
 
         except Exception as e:
-            print(f"[!] Unexpected error on page {page}: {e}")
-            time.sleep(10)
+            attempt += 1
+            print(f"[!] Unexpected error on page {page} attempt {attempt}: {e}")
+            time.sleep(random.uniform(5, 10))
 
     print(f"[!] Giving up after {max_retries} retries on page {page}")
     return None
 
 
-def scrape_category(name: str):
+def scrape_category(name: str, region="us"):
+    """Scrape all pages of a given category and save to CSV."""
     os.system("clear")
     page = 1
-    region = "uk"
-    fname = f"{name.lower()}-image.csv"
+    fname = f"{name.lower().replace(' ', '_')}.csv"
+    headers_written = False
+
     try:
-        with open(fname, "w", encoding="utf-8") as f:
-            f.write("Name,Image URL\n")
+        with open(fname, "w", encoding="utf-8", newline="") as f:
+            writer = None
 
             while True:
                 result = safe_get_part(name, region=region, page=page)
@@ -75,31 +87,41 @@ def scrape_category(name: str):
                     break
 
                 print(f"{name}: === Page {page}/{result.total_pages} ===", end="\r")
+
                 for summary in result.parts:
                     part_name = summary.name
-                    image = summary.image_urls[0] or ""
-                    # print(name, image)
-                    if summary.type == name:
-                        f.write(f"{part_name},{image}\n")
-                        f.flush()
-                    # time.sleep(random.uniform(0.5, 0.75))  # avoid rate limit
+                    image = summary.image_urls[0] if summary.image_urls else ""
+                    part = client.get_part(summary.url)
+
+                    if not headers_written:
+                        headers = ["Name", "Image URL"] + list(part.specs.keys())
+                        writer = csv.writer(f)
+                        writer.writerow(headers)
+                        headers_written = True
+
+                    row = [part_name, image] + list(part.specs.values())
+                    writer.writerow(row)
+                    f.flush()
 
                 if page >= result.total_pages:
                     break
+
                 page += 1
-                time.sleep(random.uniform(5, 10))
+                sleep_time = random.uniform(5, 10)
+                time.sleep(sleep_time)
 
     except KeyboardInterrupt:
-        print("\nScript stopped by user (Ctrl+C)!")
+        print("\n[!] Script stopped by user (Ctrl+C)!")
+    except Exception as e:
+        print(f"[!] Unexpected error while scraping {name}: {e}")
 
-    print(f"{name}: Finished scanning")
+    print(f"\n{name}: Finished scanning. Data saved to {fname}")
 
 
 def main():
-    # Felkel sorolni még
     categories = [
-        # "Processor", # Got it
-        "memory",  # Need now
+        # "Processor",
+        "Memory",
         # "Internal-Hard-Drive",
         # "External-Hard-Drive",
         # "Video-Card",
@@ -107,8 +129,8 @@ def main():
         # "Fan-Controller",
     ]
 
-    # for word in categories:
-    #    scrape_category(word)
+    for category in categories:
+        scrape_category(category)
 
 
 if __name__ == "__main__":
