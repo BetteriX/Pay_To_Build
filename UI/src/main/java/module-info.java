@@ -7,6 +7,8 @@ module org.example.ui {
     requires java.desktop;
     requires javafx.graphics;
     requires javafx.base;
+    requires java.sql;
+    requires io.github.cdimascio.dotenv.java;
 
 
     exports PayToBuild.Data;
