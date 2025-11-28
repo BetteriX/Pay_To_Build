@@ -1,34 +1,40 @@
 #!/usr/bin/env python3
 
 import mysql.connector
+from mysql.connector import Error
 from dotenv import load_dotenv
 import os
 
 
-def main():
-    print(mysql.connector.__version__)
-
+def list_databases():
     load_dotenv()
-    db = mysql.connector.connect(
-        host=os.getenv("IP"),
-        port=os.getenv("PORT"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-    )
 
-    # Get a cursor
+    host = os.getenv("IP")
+    port = int(os.getenv("PORT", 3306))
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+
+    # Connect to MySQL without specifying a database
+    db = mysql.connector.connect(host=host, port=port, user=user, password=password)
+
     cur = db.cursor()
 
-    # Execute a query
-    cur.execute("SELECT CURDATE()")
+    # Select all rows from the table
+    cur.execute("SELECT * FROM ptb.cpu_test")  # replace with your table name
 
-    # Fetch one result
-    row = cur.fetchone()
-    print("Current date is: {0}".format(row[0]))
+    # Fetch all rows
+    rows = cur.fetchall()
 
-    # Close connection
+    # Print column names
+    columns = [desc[0] for desc in cur.description]
+    print("\t".join(columns))
+
+    # Print each row
+    for row in rows:
+        print("\t".join(str(cell) for cell in row))
+
     db.close()
 
 
 if __name__ == "__main__":
-    main()
+    list_databases()
