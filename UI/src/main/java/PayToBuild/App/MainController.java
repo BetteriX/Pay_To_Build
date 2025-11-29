@@ -51,12 +51,7 @@ public class MainController {
 
     /*@FXML
     public void initialize() {
-        mainparts.sceneProperty().addListener((obs, oldScene, newScene) -> {
-            mainparts.layoutXProperty().unbind();
-            if (newScene != null) {
-                mainparts.layoutXProperty().bind(newScene.widthProperty().divide(2));
-            }
-        });
+        mainparts.setLayoutX(mainroot.getPrefWidth()/4-mainparts.getLayoutBounds().getMinX());
     }*/
 
     public void swaptoguide(ActionEvent event) throws IOException {
