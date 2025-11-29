@@ -45,4 +45,21 @@ public class CPU extends PCParts{
         this.TDP = TDP;
         this.graphic = graphic;
     }
+
+    @Override
+    public String toString() {
+        return "CPU {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", coreCount=" + coreCount +
+                ", coreClock=" + coreClock + " GHz" +
+                ", coreBoost=" + coreBoost + " GHz" +
+                ", microArchitecture='" + microArchitecture + '\'' +
+                ", TDP=" + TDP + "W" +
+                ", graphic='" + graphic + '\'' +
+                '}';
+    }
+
+
 }
