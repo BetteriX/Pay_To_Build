@@ -4,7 +4,15 @@ module org.example.ui {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
+    requires javafx.graphics;
+    requires javafx.base;
+    requires java.sql;
+    requires io.github.cdimascio.dotenv.java;
 
-    opens org.example.ui to javafx.fxml;
-    exports org.example.ui;
+
+    exports PayToBuild.Data;
+    opens PayToBuild.Data to javafx.fxml;
+    exports PayToBuild.App;
+    opens PayToBuild.App to javafx.fxml;
 }
