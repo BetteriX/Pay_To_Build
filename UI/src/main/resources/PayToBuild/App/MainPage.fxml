@@ -3,12 +3,12 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
+
+<AnchorPane fx:id="mainroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="606.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
    <children>
       <Group layoutX="-18.0" layoutY="-3.0">
          <children>
@@ -22,65 +22,90 @@
             </Label>
          </children>
       </Group>
-      <TitledPane fx:id="mainparts"  animated="true" layoutY="71.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#expandmainparts" text=" Main Parts">
-        <content>
-            <Group>
-               <children>
-                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="564.0">
-                     <children>
-                        <Group layoutX="14.0" layoutY="10.0">
-                           <children>
-                              <Label layoutY="4.0" text="CPU" />
-                              <Button fx:id="cpubutton" layoutX="72.0" mnemonicParsing="false" onAction="#swaptocpu" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="47.0">
-                           <children>
-                              <Label layoutY="4.0" text="MotherBoard" />
-                              <Button fx:id="motherboardbutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptomotherboard" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="85.0">
-                           <children>
-                              <Label layoutY="4.0" text="Memory" />
-                              <Button fx:id="memorybutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptomemory" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="123.0">
-                           <children>
-                              <Label layoutY="4.0" text="VideoCard" />
-                              <Button fx:id="gpubutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptogpu" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="161.0">
-                           <children>
-                              <Label layoutY="4.0" text="CPU Cooler" />
-                              <Button fx:id="cpucoolerbutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptocpucooler" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="204.0">
-                           <children>
-                              <Label layoutY="4.0" text="Power Supply" />
-                              <Button fx:id="psubutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptopsu" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="245.0">
-                           <children>
-                              <Label layoutY="4.0" text="Storage" />
-                              <Button fx:id="storagebutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptostorage" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                        <Group layoutX="14.0" layoutY="284.0">
-                           <children>
-                              <Label layoutY="4.0" text="PC Case" />
-                              <Button fx:id="casebutton" layoutX="129.0" mnemonicParsing="false" onAction="#swaptocase" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="ADD" />
-                           </children>
-                        </Group>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </Group>
-        </content>
-      </TitledPane>
+      <Label fx:id="partlabel" layoutX="88.0" layoutY="83.0" text="Parts:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Group layoutX="173.0" layoutY="132.0">
+         <children>
+            <Label fx:id="cpulabel" layoutY="2.0" text="CPU">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="cpubutton" layoutX="141.0" mnemonicParsing="false" text="ADD" />
+         </children>
+      </Group>
+      <Group layoutX="123.0" layoutY="172.0">
+         <children>
+            <Label fx:id="motherboardlabel" layoutY="2.0" text="MotherBoard">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="motherboardbutton" layoutX="191.0" mnemonicParsing="false" text="ADD" />
+         </children>
+      </Group>
+      <Group layoutX="154.0" layoutY="212.0">
+         <children>
+            <Label fx:id="memorylabel" layoutY="2.0" text="Memory">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="memorybutton" layoutX="160.0" mnemonicParsing="false" text="ADD" />
+         </children>
+      </Group>
+      <Group layoutX="173.0" layoutY="255.0">
+         <children>
+            <Label fx:id="caselabel" layoutY="2.0" text="Case">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="casebutton" layoutX="141.0" mnemonicParsing="false" text="ADD" />
+         </children>
+      </Group>
+      <Group layoutX="137.0" layoutY="297.0">
+         <children>
+            <Button fx:id="cpucoolerbutton" layoutX="177.0" mnemonicParsing="false" text="ADD" />
+            <Label fx:id="cpucoolerlabel" layoutY="2.0" text="CPUCooler">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="123.0" layoutY="341.0">
+         <children>
+            <Button fx:id="psubutton" layoutX="191.0" mnemonicParsing="false" text="ADD" />
+            <Label fx:id="powersupplylabel" layoutY="2.0" text="Power Supply">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="161.0" layoutY="384.0">
+         <children>
+            <Button fx:id="storagebutton" layoutX="153.0" mnemonicParsing="false" text="ADD" />
+            <Label fx:id="storagelabel" layoutY="2.0" text="Storage">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="136.0" layoutY="424.0">
+         <children>
+            <Button fx:id="gpubutton" layoutX="178.0" mnemonicParsing="false" text="ADD" />
+            <Label fx:id="videocardlabel" layoutY="2.0" text="Video Card">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
    </children>
 </AnchorPane>
