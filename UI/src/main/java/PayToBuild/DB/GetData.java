@@ -10,22 +10,20 @@ import java.util.Map;
 public class GetData {
 
     private static final Map<String, List<String>> socketToMicroarch = Map.of(
-            "AM4", List.of("Zen","Zen+","Zen 2","Zen 3","Zen 3D"),
-            "AM5", List.of("Zen 4","Zen 4c","Zen 4 (3D V-Cache)","Zen 5","Zen 5c"),
-            "LGA1151", List.of("Skylake","Kaby Lake","Coffee Lake"),
-            "LGA1200", List.of("Comet Lake","Rocket Lake"),
-            "LGA1700", List.of("Alder Lake","Raptor Lake","Raptor Lake Refresh"),
-            "LGA1851", List.of("Arrow Lake","Panther Lake"),
-            "sTRX4", List.of("Zen 2 Threadripper","Zen 3 Threadripper"),
-            "LGA1150", List.of("Haswell","Broadwell"),
-            "LGA775", List.of("NetBurst","Core 2")
+            "AM4", List.of("Zen", "Zen+", "Zen 2", "Zen 3", "Zen 3D"),
+            "AM5", List.of("Zen 4", "Zen 4c", "Zen 4 (3D V-Cache)", "Zen 5", "Zen 5c"),
+            "LGA1151", List.of("Skylake", "Kaby Lake", "Coffee Lake"),
+            "LGA1200", List.of("Comet Lake", "Rocket Lake"),
+            "LGA1700", List.of("Alder Lake", "Raptor Lake", "Raptor Lake Refresh"),
+            "LGA1851", List.of("Arrow Lake", "Panther Lake"),
+            "sTRX4", List.of("Zen 2 Threadripper", "Zen 3 Threadripper"),
+            "LGA1150", List.of("Haswell", "Broadwell"),
+            "LGA775", List.of("NetBurst", "Core 2")
     );
 
     public static List<String> getMicroarchitectures(String socket) {
         return socketToMicroarch.getOrDefault(socket.trim().toUpperCase(), List.of());
     }
-
-
 
 
     public static List<CPU> Get_Processor_Data(ResultSet resultSet) throws SQLException {
@@ -59,13 +57,13 @@ public class GetData {
             Case pcCase = new Case(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL
+                    null, // nincs URL adat
                     resultSet.getString("color"),
                     resultSet.getString("type"),
-                    resultSet.getInt("psu_watt"),
+                    resultSet.getInt("psu"),
                     resultSet.getFloat("external_volume"),
                     resultSet.getString("side_panel"),
-                    resultSet.getInt("internal_35_bay")
+                    resultSet.getInt("internal_35_bays")
             );
 
             caseList.add(pcCase);
@@ -74,30 +72,18 @@ public class GetData {
         return caseList;
     }
 
-    public static List<CPUCooler> Get_Cooler_Data(ResultSet resultSet) throws SQLException {
+    public static List<CPUCooler> Get_CPUCooler_Data(ResultSet resultSet) throws SQLException {
         List<CPUCooler> coolerList = new ArrayList<>();
 
         while (resultSet.next()) {
 
-            String noiseString = resultSet.getString("noise_level");
-            List<Float> noiseList = new ArrayList<>();
-
-            if (noiseString != null && !noiseString.isEmpty()) {
-                String[] parts = noiseString.split(",");
-                for (String p : parts) {
-                    try {
-                        noiseList.add(Float.parseFloat(p.trim()));
-                    } catch (NumberFormatException ignored) { }
-                }
-            }
-
             CPUCooler cooler = new CPUCooler(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL
+                    null, // nincs URL adat
                     resultSet.getInt("rpm"),
                     resultSet.getInt("size"),
-                    noiseList,
+                    resultSet.getString("noise_level"),
                     resultSet.getString("color")
             );
 
@@ -112,29 +98,15 @@ public class GetData {
 
         while (resultSet.next()) {
 
-            String colorString = resultSet.getString("color");
-            List<String> colorList = new ArrayList<>();
-
-            if (colorString != null && !colorString.isEmpty()) {
-                String[] parts = colorString.split(",");
-                for (String p : parts) {
-                    String trimmed = p.trim();
-                    if (!trimmed.isEmpty()) {
-                        colorList.add(trimmed);
-                    }
-                }
-            }
-
             Memory memory = new Memory(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL
+                    null, // nincs URL adat
                     resultSet.getInt("speed"),
-                    resultSet.getInt("ddr"),
-                    resultSet.getFloat("price_p_rgb"),
+                    resultSet.getFloat("price_per_gb"),
                     resultSet.getString("modules"),
-                    colorList,
-                    resultSet.getFloat("fw_latency"),
+                    resultSet.getString("color"),
+                    resultSet.getFloat("first_word_latency"),
                     resultSet.getFloat("cas_latency")
             );
 
@@ -149,31 +121,18 @@ public class GetData {
 
         while (resultSet.next()) {
 
-            String colorString = resultSet.getString("color");
-            List<String> colorList = new ArrayList<>();
-
-            if (colorString != null && !colorString.isEmpty()) {
-                String[] parts = colorString.split(",");
-                for (String p : parts) {
-                    String trimmed = p.trim();
-                    if (!trimmed.isEmpty()) {
-                        colorList.add(trimmed);
-                    }
-                }
-            }
-
-            Motherboard mb = new Motherboard(
+            Motherboard motherboard = new Motherboard(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL
+                    null, // nincs URL adat tárolva
                     resultSet.getString("socket"),
                     resultSet.getInt("memory_slots"),
-                    resultSet.getInt("max_supported_memory"),
+                    resultSet.getInt("max_memory"),
                     resultSet.getString("form_factor"),
-                    colorList
+                    resultSet.getString("color")
             );
 
-            motherboardList.add(mb);
+            motherboardList.add(motherboard);
         }
 
         return motherboardList;
@@ -184,27 +143,12 @@ public class GetData {
 
         while (resultSet.next()) {
 
-            String colorString = resultSet.getString("color");
-            List<String> colorList = new ArrayList<>();
-
-            if (colorString != null && !colorString.isEmpty()) {
-                String[] parts = colorString.split(",");
-                for (String p : parts) {
-                    String trimmed = p.trim();
-                    if (!trimmed.isEmpty()) {
-                        colorList.add(trimmed);
-                    }
-                }
-            }
-
             PSU psu = new PSU(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL kezelve
-                    resultSet.getInt("wattage"),
-                    colorList,
-                    resultSet.getString("modular"),
-                    resultSet.getString("efficiency_rate")
+                    null, // URL nincs tárolva
+                    resultSet.getInt("capacity_w"),
+                    resultSet.getInt("capacity_va")
             );
 
             psuList.add(psu);
@@ -221,13 +165,13 @@ public class GetData {
             Storage storage = new Storage(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL
+                    null, // nincs URL oszlop
                     resultSet.getString("type"),
                     resultSet.getString("form_factor"),
                     resultSet.getInt("capacity"),
-                    resultSet.getFloat("price_p_rgb"),
+                    resultSet.getFloat("price_per_gb"),
                     resultSet.getInt("cache"),
-                    resultSet.getString("drive_interface")
+                    resultSet.getString("interface")
             );
 
             storageList.add(storage);
@@ -236,43 +180,29 @@ public class GetData {
         return storageList;
     }
 
-
     public static List<VideoCard> Get_VideoCard_Data(ResultSet resultSet) throws SQLException {
-        List<VideoCard> gpuList = new ArrayList<>();
+        List<VideoCard> videoCards = new ArrayList<>();
 
         while (resultSet.next()) {
 
-            String colorString = resultSet.getString("color");
-            List<String> colorList = new ArrayList<>();
-
-            if (colorString != null && !colorString.isEmpty()) {
-                String[] parts = colorString.split(",");
-                for (String p : parts) {
-                    String trimmed = p.trim();
-                    if (!trimmed.isEmpty()) {
-                        colorList.add(trimmed);
-                    }
-                }
-            }
-
-            VideoCard gpu = new VideoCard(
+            VideoCard vc = new VideoCard(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // egyelőre nincs URL
+                    null, // nincs URL oszlop
                     resultSet.getInt("memory"),
-                    colorList,
+                    resultSet.getString("color"),
                     resultSet.getInt("core_clock"),
                     resultSet.getInt("boost_clock"),
                     resultSet.getInt("length"),
                     resultSet.getString("chipset")
             );
 
-            gpuList.add(gpu);
+            videoCards.add(vc);
         }
 
-        return gpuList;
+        return videoCards;
     }
 
 
-}
 
+}
