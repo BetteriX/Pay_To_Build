@@ -49,6 +49,7 @@ public class MainController {
     @FXML
     private Button casebutton;
 
+
     /*@FXML
     public void initialize() {
         mainparts.setLayoutX(mainroot.getPrefWidth()/4-mainparts.getLayoutBounds().getMinX());
@@ -87,7 +88,7 @@ public class MainController {
     }
 
     public void swaptocpu(ActionEvent event) throws IOException {
-
+        //passType()
     }
 
     public void swaptocase(ActionEvent event) throws IOException {

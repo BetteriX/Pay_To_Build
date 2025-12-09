@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 
@@ -20,9 +21,11 @@ import java.io.IOException;
 
         @FXML
         public void backtomain(MouseEvent event) throws IOException {
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
             root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            scene = new Scene(root,screenSize.width,screenSize.height);
             stage.setTitle("MainPage");
             stage.setScene(scene);
             stage.show();
