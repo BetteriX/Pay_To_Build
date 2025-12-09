@@ -8,8 +8,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,11 +30,24 @@ public class DataController {
     private Button guidebutton;
     @FXML
     private Button loginbutton;
+    @FXML
+    private Region right;
+    @FXML
+    private Region left;
+    @FXML
+    private Label dataname;
+    @FXML
+    private ScrollPane scrollPane;
+    @FXML
+    private HBox dy_root;
+    @FXML
+    private VBox dynamiccontainer;
 
 
 
 
 
+    @FXML
     public void swaptoguide(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("GuidePage.fxml"));
         stage= (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -38,6 +56,8 @@ public class DataController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
     public void swaptologin(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         stage= (Stage)((Node)event.getSource()).getScene().getWindow();

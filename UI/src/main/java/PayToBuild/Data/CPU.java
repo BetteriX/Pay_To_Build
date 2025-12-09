@@ -3,46 +3,48 @@ package PayToBuild.Data;
 import java.net.URL;
 
 public class CPU extends PCParts{
-    int coreCount;
-    float coreClock;
-    float coreBoost;
-    String microArchitecture;
-    int TDP;
+    int core_count;
+    float core_clock;
+    float boost_clock;
+    String microarchitecture;
+    int tdp;
     String graphic; //built in
 
-    public CPU(String name, float price, URL url, int coreCount, float coreClock, float coreBoost, String microArchitecture, int TDP, String graphic) {
+
+
+    public CPU(String name, float price, URL url, int core_count, float core_clock, float boost_clock, String microarchitecture, int tdp, String graphic) {
 
         super(name, price, url);
 
-        if (microArchitecture == null || microArchitecture.isEmpty()) {
-            microArchitecture = "";
+        if (microarchitecture == null || microarchitecture.isEmpty()) {
+            microarchitecture = "";
         }
 
         if (graphic == null || graphic.isEmpty()) {
             graphic = "";
         }
 
-        if (coreCount < 0) {
-            coreCount = 0;
+        if (core_count < 0) {
+            core_count = 0;
         }
 
-        if (coreClock < 0) {
-            coreClock = 0.0f;
+        if (core_clock < 0) {
+            core_clock = 0.0f;
         }
 
-        if (coreBoost < 0) {
-            coreBoost = 0.0f;
+        if (boost_clock < 0) {
+            boost_clock = 0.0f;
         }
 
-        if (TDP < 0) {
-            TDP = 0;
+        if (tdp < 0) {
+            tdp = 0;
         }
 
-        this.coreCount = coreCount;
-        this.coreClock = coreClock;
-        this.coreBoost = coreBoost;
-        this.microArchitecture = microArchitecture;
-        this.TDP = TDP;
+        this.core_count = core_count;
+        this.core_clock = core_clock;
+        this.boost_clock = boost_clock;
+        this.microarchitecture = microarchitecture;
+        this.tdp = tdp;
         this.graphic = graphic;
     }
 
@@ -52,11 +54,11 @@ public class CPU extends PCParts{
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", url=" + url +
-                ", coreCount=" + coreCount +
-                ", coreClock=" + coreClock + " GHz" +
-                ", coreBoost=" + coreBoost + " GHz" +
-                ", microArchitecture='" + microArchitecture + '\'' +
-                ", TDP=" + TDP + "W" +
+                ", core_count=" + core_count +
+                ", core_clock=" + core_clock + " GHz" +
+                ", boost_clock=" + boost_clock + " GHz" +
+                ", microarchitecture='" + microarchitecture + '\'' +
+                ", tdp=" + tdp + "W" +
                 ", graphic='" + graphic + '\'' +
                 '}';
     }
