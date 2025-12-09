@@ -10,7 +10,53 @@ public class CPU extends PCParts{
     int tdp;
     String graphic; //built in
 
+    public int getCore_count() {
+        return core_count;
+    }
 
+    public void setCore_count(int core_count) {
+        this.core_count = core_count;
+    }
+
+    public float getCore_clock() {
+        return core_clock;
+    }
+
+    public void setCore_clock(float core_clock) {
+        this.core_clock = core_clock;
+    }
+
+    public float getBoost_clock() {
+        return boost_clock;
+    }
+
+    public void setBoost_clock(float boost_clock) {
+        this.boost_clock = boost_clock;
+    }
+
+    public String getMicroarchitecture() {
+        return microarchitecture;
+    }
+
+    public void setMicroarchitecture(String microarchitecture) {
+        this.microarchitecture = microarchitecture;
+    }
+
+    public int getTdp() {
+        return tdp;
+    }
+
+    public void setTdp(int tdp) {
+        this.tdp = tdp;
+    }
+
+    public String getGraphic() {
+        return graphic;
+    }
+
+    public void setGraphic(String graphic) {
+        this.graphic = graphic;
+    }
 
     public CPU(String name, float price, URL url, int core_count, float core_clock, float boost_clock, String microarchitecture, int tdp, String graphic) {
 
