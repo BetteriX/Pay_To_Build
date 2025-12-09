@@ -5,12 +5,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CPUCooler extends PCParts{
-    int RPM;
+    int rpm;
     int size;
-    List<Float> noiseLevel;
+    String noise_level;
     String color;
 
-    public CPUCooler(String name, float price, URL url, int RPM, int size, List<Float> noiseLevel, String color) {
+    public int getRpm() {
+        return rpm;
+    }
+
+    public void setRpm(int rpm) {
+        this.rpm = rpm;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public String getNoise_level() {
+        return noise_level;
+    }
+
+    public void setNoise_level(String noise_level) {
+        this.noise_level = noise_level;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public CPUCooler(String name, float price, URL url, int rpm, int size, String noise_level, String color) {
 
         super(name, price, url);
 
@@ -18,21 +50,21 @@ public class CPUCooler extends PCParts{
             color = "";
         }
 
-        if (noiseLevel == null) {
-            noiseLevel = new ArrayList<>();
+        if (noise_level == null) {
+           noise_level = "";
         }
 
-        if (RPM < 0) {
-            RPM = 0;
+        if (rpm < 0) {
+            rpm = 0;
         }
 
         if (size < 0) {
             size = 0;
         }
 
-        this.RPM = RPM;
+        this.rpm = rpm;
         this.size = size;
-        this.noiseLevel = noiseLevel;
+        this.noise_level = noise_level;
         this.color = color;
     }
 }

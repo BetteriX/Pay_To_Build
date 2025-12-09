@@ -15,7 +15,7 @@ public class MainApplication extends Application {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Card.fxml"));
             Scene scene = new Scene(root, screenSize.width, screenSize.height);
             stage.setTitle("MainPage");
             stage.setScene(scene);

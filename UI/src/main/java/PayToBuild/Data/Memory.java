@@ -5,16 +5,62 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Memory extends PCParts{
-    //int speedInt; Possibly need it or not
     int speed;
-    int ddr;
     String modules; //e.g. 2x16GB
-    float pricePRgb;
-    List<String> color;
-    float fwLatency;
-    float casLatency;
+    float price_per_gb;
+    String color;
+    float first_word_latency;
+    float cas_latency;
 
-    public Memory(String name, float price, URL url, int speed, int ddr, float pricePRgb, String modules, List<String> color, float fwLatency, float casLatency) {
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getModules() {
+        return modules;
+    }
+
+    public void setModules(String modules) {
+        this.modules = modules;
+    }
+
+    public float getPrice_per_gb() {
+        return price_per_gb;
+    }
+
+    public void setPrice_per_gb(float price_per_gb) {
+        this.price_per_gb = price_per_gb;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public float getFirst_word_latency() {
+        return first_word_latency;
+    }
+
+    public void setFirst_word_latency(float first_word_latency) {
+        this.first_word_latency = first_word_latency;
+    }
+
+    public float getCas_latency() {
+        return cas_latency;
+    }
+
+    public void setCas_latency(float cas_latency) {
+        this.cas_latency = cas_latency;
+    }
+
+    public Memory(String name, float price, URL url, int speed, float price_per_gb, String modules, String color, float first_word_latency, float cas_latency) {
 
         super(name, price, url);
 
@@ -22,36 +68,32 @@ public class Memory extends PCParts{
             modules = "";
         }
 
-        if (color == null) {
-            color = new ArrayList<>();
+        if (color == null || color.isEmpty()) {
+            color = "";
         }
 
         if (speed < 0) {
             speed = 0;
         }
 
-        if (casLatency < 0) {
-            casLatency = 0.0f;
+        if (cas_latency < 0) {
+            cas_latency = 0.0f;
         }
 
-        if (fwLatency < 0) {
-            fwLatency = 0.0f;
+        if (first_word_latency < 0) {
+            first_word_latency = 0.0f;
         }
 
-        if (pricePRgb < 0) {
-            pricePRgb = 0.0f;
+        if (price_per_gb < 0) {
+            price_per_gb = 0.0f;
         }
-
-        if (ddr < 0) {
-            ddr = 0;
-        }
+        
 
         this.speed = speed;
-        this.ddr = ddr;
-        this.pricePRgb = pricePRgb;
+        this.price_per_gb = price_per_gb;
         this.modules = modules;
         this.color = color;
-        this.fwLatency = fwLatency;
-        this.casLatency = casLatency;
+        this.first_word_latency = first_word_latency;
+        this.cas_latency = cas_latency;
     }
 }
