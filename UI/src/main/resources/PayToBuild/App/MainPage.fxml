@@ -7,8 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="mainroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="606.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
+<AnchorPane fx:id="mainroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="606.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayToBuild.App.MainController">
    <children>
       <Group layoutX="-18.0" layoutY="-3.0">
          <children>
@@ -22,87 +21,111 @@
             </Label>
          </children>
       </Group>
-      <Label fx:id="partlabel" layoutX="88.0" layoutY="83.0" text="Parts:">
+      <Label fx:id="partlabel" layoutX="780.0" layoutY="83.0" prefHeight="45.0" prefWidth="80.0" text="Parts:">
          <font>
-            <Font size="20.0" />
+            <Font size="30.0" />
          </font>
       </Label>
-      <Group layoutX="173.0" layoutY="132.0">
+      <Group layoutX="900.0" layoutY="200.0">
          <children>
             <Label fx:id="cpulabel" layoutY="2.0" text="CPU">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="cpubutton" layoutX="141.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="cpubutton" layoutX="141.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </Group>
-      <Group layoutX="123.0" layoutY="172.0">
+      <Group layoutX="900.0" layoutY="260.0">
          <children>
             <Label fx:id="motherboardlabel" layoutY="2.0" text="MotherBoard">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="motherboardbutton" layoutX="191.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="motherboardbutton" layoutX="191.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </Group>
-      <Group layoutX="154.0" layoutY="212.0">
+      <Group layoutX="900.0" layoutY="320.0">
          <children>
             <Label fx:id="memorylabel" layoutY="2.0" text="Memory">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="memorybutton" layoutX="160.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="memorybutton" layoutX="160.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </Group>
-      <Group layoutX="173.0" layoutY="255.0">
+      <Group layoutX="900.0" layoutY="380.0">
          <children>
             <Label fx:id="caselabel" layoutY="2.0" text="Case">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
-            <Button fx:id="casebutton" layoutX="141.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="casebutton" layoutX="141.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </Group>
-      <Group layoutX="137.0" layoutY="297.0">
+      <Group layoutX="900.0" layoutY="440.0">
          <children>
-            <Button fx:id="cpucoolerbutton" layoutX="177.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="cpucoolerbutton" layoutX="177.0" layoutY="4.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
             <Label fx:id="cpucoolerlabel" layoutY="2.0" text="CPUCooler">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
          </children>
       </Group>
-      <Group layoutX="123.0" layoutY="341.0">
+      <Group layoutX="900.0" layoutY="500.0">
          <children>
-            <Button fx:id="psubutton" layoutX="191.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="psubutton" layoutX="191.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
             <Label fx:id="powersupplylabel" layoutY="2.0" text="Power Supply">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
          </children>
       </Group>
-      <Group layoutX="161.0" layoutY="384.0">
+      <Group layoutX="900.0" layoutY="560.0">
          <children>
-            <Button fx:id="storagebutton" layoutX="153.0" mnemonicParsing="false" text="ADD" />
+            <Button fx:id="storagebutton" layoutX="153.0" layoutY="4.0" mnemonicParsing="false" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
             <Label fx:id="storagelabel" layoutY="2.0" text="Storage">
                <font>
-                  <Font size="15.0" />
+                  <Font size="25.0" />
                </font>
             </Label>
          </children>
       </Group>
-      <Group layoutX="136.0" layoutY="424.0">
+      <Group layoutX="900.0" layoutY="620.0">
          <children>
-            <Button fx:id="gpubutton" layoutX="178.0" mnemonicParsing="false" text="ADD" />
-            <Label fx:id="videocardlabel" layoutY="2.0" text="Video Card">
+            <Button fx:id="gpubutton" layoutX="178.0" layoutY="5.0" mnemonicParsing="false" text="ADD">
                <font>
                   <Font size="15.0" />
+               </font></Button>
+            <Label fx:id="videocardlabel" layoutY="2.0" text="Video Card">
+               <font>
+                  <Font size="25.0" />
                </font>
             </Label>
          </children>
