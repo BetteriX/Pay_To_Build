@@ -93,4 +93,21 @@ public class Storage extends PCParts{
         this.cache = cache;
         this.driveInterface = driveInterface;
     }
+
+    @Override
+    public String toString() {
+        return "Storage {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", type='" + type + '\'' +
+                ", form_factor='" + form_factor + '\'' +
+                ", capacity=" + capacity + " GB" +
+                ", price_per_gb=" + price_per_gb +
+                ", cache=" + cache + " MB" +
+                ", driveInterface='" + driveInterface + '\'' +
+                '}';
+    }
+
+
 }

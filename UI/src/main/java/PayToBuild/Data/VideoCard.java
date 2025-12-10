@@ -95,4 +95,21 @@ public class VideoCard extends PCParts{
         this.length = length;
         this.chipset = chipset;
     }
+
+    @Override
+    public String toString() {
+        return "VideoCard {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", memory=" + memory + " GB" +
+                ", color='" + color + '\'' +
+                ", core_clock=" + core_clock + " MHz" +
+                ", boost_clock=" + boost_clock + " MHz" +
+                ", length=" + length + " mm" +
+                ", chipset='" + chipset + '\'' +
+                '}';
+    }
+
+
 }
