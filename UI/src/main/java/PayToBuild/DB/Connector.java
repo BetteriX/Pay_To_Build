@@ -3,6 +3,7 @@ package PayToBuild.DB;
 import PayToBuild.Data.*;
 import io.github.cdimascio.dotenv.Dotenv;
 
+import java.net.MalformedURLException;
 import java.sql.*;
 import java.util.List;
 
@@ -37,6 +38,8 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
         }
     }
 }
