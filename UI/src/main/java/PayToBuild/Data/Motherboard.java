@@ -81,4 +81,20 @@ public class Motherboard extends PCParts {
         this.form_factor = form_factor;
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Motherboard {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", socket='" + socket + '\'' +
+                ", memory_slots=" + memory_slots +
+                ", max_memory=" + max_memory + " GB" +
+                ", form_factor='" + form_factor + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
+
 }

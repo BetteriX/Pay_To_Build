@@ -96,4 +96,21 @@ public class Memory extends PCParts{
         this.first_word_latency = first_word_latency;
         this.cas_latency = cas_latency;
     }
+
+    @Override
+    public String toString() {
+        return "Memory {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", speed=" + speed + " MHz" +
+                ", modules='" + modules + '\'' +
+                ", price_per_gb=" + price_per_gb +
+                ", color='" + color + '\'' +
+                ", first_word_latency=" + first_word_latency + " ns" +
+                ", cas_latency=" + cas_latency +
+                '}';
+    }
+
+
 }
