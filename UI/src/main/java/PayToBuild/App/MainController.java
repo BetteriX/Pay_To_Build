@@ -14,7 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
+import PayToBuild.App.DataController.*;
 import java.awt.*;
 import java.io.IOException;
 
@@ -50,10 +50,6 @@ public class MainController {
     private Button casebutton;
 
 
-    /*@FXML
-    public void initialize() {
-        mainparts.setLayoutX(mainroot.getPrefWidth()/4-mainparts.getLayoutBounds().getMinX());
-    }*/
 
     public void swaptoguide(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("GuidePage.fxml"));
@@ -83,39 +79,46 @@ public class MainController {
         }
 
     }
+
+    public void PassData(String s){
+        DataController dc = new DataController();
+        dc.setMainController(this);
+        dc.LoadDataBase(s);
+    }
+
     public void expandmainparts(ActionEvent event) {
         mainparts.setExpanded(!mainparts.isExpanded());
     }
 
     public void swaptocpu(ActionEvent event) throws IOException {
-        //passType()
+        PassData("cpu");
     }
 
     public void swaptocase(ActionEvent event) throws IOException {
-
+        PassData("case");
     }
 
     public void swaptocpucooler(ActionEvent event) throws IOException {
-
+        PassData("`cpu-cooler`");
     }
 
     public void swaptomemory(ActionEvent event) throws IOException {
-
+        PassData("memory");
     }
 
     public void swaptomotherboard(ActionEvent event) throws IOException {
-
+        PassData("motherboard");
     }
 
     public void swaptopsu(ActionEvent event) throws IOException {
-
+        PassData("ups");
     }
 
     public void swaptostorage(ActionEvent event) throws IOException {
-
+        PassData("`internal-hard-drive`");
     }
 
     public void swaptogpu(ActionEvent event) throws IOException {
-
+        PassData("`video-card`");
     }
 }
