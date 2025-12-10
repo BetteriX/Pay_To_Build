@@ -50,13 +50,13 @@ public class CPUCooler extends PCParts{
             color = "";
         }
 
-        if (noise_level == null|| color.isEmpty()) {
+        if (noise_level == null|| noise_level.isEmpty()) {
            noise_level = "";
         }
 
 
-        if (color == null || color.isEmpty()) {
-            color = "";
+        if (rpm == null || rpm.isEmpty()) {
+            rpm = "";
         }
 
 

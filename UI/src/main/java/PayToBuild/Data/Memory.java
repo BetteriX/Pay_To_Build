@@ -72,7 +72,7 @@ public class Memory extends PCParts{
             color = "";
         }
 
-        if (speed == null || color.isEmpty()) {
+        if (speed == null || speed.isEmpty()) {
             speed = "";
         }
 
