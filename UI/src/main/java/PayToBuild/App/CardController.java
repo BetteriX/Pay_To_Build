@@ -97,7 +97,7 @@ public class CardController {
         imageView.setPreserveRatio(true);
 
         Label priceLable = new Label("Price: $" + pcMemory.getPrice());
-        Label speedLabel = new Label("Memory speed: " + pcMemory.getSpeed());
+        Label speedLabel = new Label("Memory speed MHz: " + pcMemory.getSpeed());
         Label moduleLabel = new Label("Module type: " + pcMemory.getModules());
         Label pricePRgbLabel = new Label("Price/GB: " + pcMemory.getPrice_per_gb());
         Label colorLabel = new Label("Color: " + String.join(",",pcMemory.getColor()));
