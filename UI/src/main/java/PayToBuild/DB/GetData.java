@@ -1,6 +1,9 @@
 package PayToBuild.DB;
 
 import PayToBuild.Data.*;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -26,15 +29,24 @@ public class GetData {
     }
 
 
-    public static List<CPU> Get_Processor_Data(ResultSet resultSet) throws SQLException {
+    public static List<CPU> Get_Processor_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<CPU> cpuList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             CPU cpu = new CPU(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // no URL for now
+                    imageUrl,
                     resultSet.getInt("core_count"),
                     resultSet.getFloat("core_clock"),
                     resultSet.getFloat("boost_clock"),
@@ -49,15 +61,24 @@ public class GetData {
         return cpuList;
     }
 
-    public static List<Case> Get_Case_Data(ResultSet resultSet) throws SQLException {
+    public static List<Case> Get_Case_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<Case> caseList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             Case pcCase = new Case(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL adat
+                    imageUrl,
                     resultSet.getString("color"),
                     resultSet.getString("type"),
                     resultSet.getInt("psu"),
@@ -72,15 +93,24 @@ public class GetData {
         return caseList;
     }
 
-    public static List<CPUCooler> Get_CPUCooler_Data(ResultSet resultSet) throws SQLException {
+    public static List<CPUCooler> Get_CPUCooler_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<CPUCooler> coolerList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             CPUCooler cooler = new CPUCooler(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL adat
+                    imageUrl,
                     resultSet.getInt("rpm"),
                     resultSet.getInt("size"),
                     resultSet.getString("noise_level"),
@@ -93,15 +123,24 @@ public class GetData {
         return coolerList;
     }
 
-    public static List<Memory> Get_Memory_Data(ResultSet resultSet) throws SQLException {
+    public static List<Memory> Get_Memory_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<Memory> memoryList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             Memory memory = new Memory(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL adat
+                    imageUrl,
                     resultSet.getInt("speed"),
                     resultSet.getFloat("price_per_gb"),
                     resultSet.getString("modules"),
@@ -116,15 +155,24 @@ public class GetData {
         return memoryList;
     }
 
-    public static List<Motherboard> Get_Motherboard_Data(ResultSet resultSet) throws SQLException {
+    public static List<Motherboard> Get_Motherboard_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<Motherboard> motherboardList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             Motherboard motherboard = new Motherboard(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL adat tárolva
+                    imageUrl,
                     resultSet.getString("socket"),
                     resultSet.getInt("memory_slots"),
                     resultSet.getInt("max_memory"),
@@ -138,15 +186,24 @@ public class GetData {
         return motherboardList;
     }
 
-    public static List<PSU> Get_PSU_Data(ResultSet resultSet) throws SQLException {
+    public static List<PSU> Get_PSU_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<PSU> psuList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             PSU psu = new PSU(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // URL nincs tárolva
+                    imageUrl,
                     resultSet.getInt("capacity_w"),
                     resultSet.getInt("capacity_va")
             );
@@ -157,15 +214,24 @@ public class GetData {
         return psuList;
     }
 
-    public static List<Storage> Get_Storage_Data(ResultSet resultSet) throws SQLException {
+    public static List<Storage> Get_Storage_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<Storage> storageList = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             Storage storage = new Storage(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL oszlop
+                    imageUrl,
                     resultSet.getString("type"),
                     resultSet.getString("form_factor"),
                     resultSet.getInt("capacity"),
@@ -180,15 +246,24 @@ public class GetData {
         return storageList;
     }
 
-    public static List<VideoCard> Get_VideoCard_Data(ResultSet resultSet) throws SQLException {
+    public static List<VideoCard> Get_VideoCard_Data(ResultSet resultSet) throws SQLException, MalformedURLException {
         List<VideoCard> videoCards = new ArrayList<>();
 
         while (resultSet.next()) {
 
+            String imageStr = resultSet.getString("image");
+            URL imageUrl;
+
+            if (imageStr == null || imageStr.isBlank()) {
+                imageUrl = new URL("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+            } else {
+                imageUrl = new URL(imageStr);
+            }
+
             VideoCard vc = new VideoCard(
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
-                    null, // nincs URL oszlop
+                    imageUrl,
                     resultSet.getInt("memory"),
                     resultSet.getString("color"),
                     resultSet.getInt("core_clock"),
