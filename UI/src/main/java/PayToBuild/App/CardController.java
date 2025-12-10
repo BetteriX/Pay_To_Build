@@ -46,7 +46,7 @@ public class CardController {
         Label sidePanelLabel = new Label("Side panel type: " + pcCase.getSide_panel());
         Label internal35bayLabel = new Label("Number of 3.5 bays: " + pcCase.getInternal_35_bays());
 
-        carddataroot.getChildren().addAll(priceLable,colorLabel,typeLabel,psuInWattLabel,externalVolumeLabel,sidePanelLabel,internal35bayLabel);
+        carddataroot.getChildren().addAll(priceLable,colorLabel,typeLabel,psuInWattLabel,externalVolumeLabel,sidePanelLabel,internal35bayLabel,imageView);
     }
 
     public void DisplayCPU(CPU pcCPU){
@@ -84,7 +84,7 @@ public class CardController {
         Label noiseLevelLabel = new Label("Noise levels: " + pcCPUCooler.getNoise_level());
         Label colorLabel = new Label("Color: " + pcCPUCooler.getColor());
 
-        carddataroot.getChildren().addAll(priceLable,RPMLabel,sizeLabel,noiseLevelLabel,colorLabel);
+        carddataroot.getChildren().addAll(priceLable,RPMLabel,sizeLabel,noiseLevelLabel,colorLabel,imageView);
     }
 
     public void DisplayMemory(Memory pcMemory){
@@ -104,7 +104,7 @@ public class CardController {
         Label fwLatencyLabel = new Label("FW latency: " + pcMemory.getFirst_word_latency());
         Label casLatencyLabel = new Label("CAS latency: " + pcMemory.getCas_latency());
 
-        carddataroot.getChildren().addAll(priceLable,speedLabel,moduleLabel,pricePRgbLabel,colorLabel,fwLatencyLabel,casLatencyLabel);
+        carddataroot.getChildren().addAll(priceLable,speedLabel,moduleLabel,pricePRgbLabel,colorLabel,fwLatencyLabel,casLatencyLabel,imageView);
     }
 
     public void DisplayMotherboard(Motherboard pcMotherboard){
@@ -122,7 +122,7 @@ public class CardController {
         Label formFactorLabel = new Label("Form factor: " + pcMotherboard.getForm_factor());
         Label colorLabel = new Label("Color " + String.join(",",pcMotherboard.getColor()));
 
-        carddataroot.getChildren().addAll(priceLable,socketLabel,memorySlotsLabel,maxSuppMemoryLabel,formFactorLabel,colorLabel);
+        carddataroot.getChildren().addAll(priceLable,socketLabel,memorySlotsLabel,maxSuppMemoryLabel,formFactorLabel,colorLabel,imageView);
     }
 
     public void DisplayPSU(PSU pcPSU){
@@ -157,7 +157,7 @@ public class CardController {
         Label formFactorLabel = new Label("Form factor: " + pcStorge.getForm_factor());
         Label interfaceLabel = new Label("Interfaces: " + pcStorge.getDriveInterface());
 
-        carddataroot.getChildren().addAll(priceLable,capacityLabel,pricePRgbLabel,typeLabel,cacheLabel,formFactorLabel,interfaceLabel);
+        carddataroot.getChildren().addAll(priceLable,capacityLabel,pricePRgbLabel,typeLabel,cacheLabel,formFactorLabel,interfaceLabel,imageView);
     }
 
     public void DisplayVideoCard(VideoCard pcVideoCard ){
@@ -177,9 +177,10 @@ public class CardController {
         Label colorLabel = new Label("Color: " + pcVideoCard.getColor());
         Label lengthLabel = new Label("Length in mm: " + pcVideoCard.getLength());
 
-        carddataroot.getChildren().addAll(priceLable,chipsetLabel,memoryLabel,coreClockLabel,boostClockLabel,colorLabel,lengthLabel);
+        carddataroot.getChildren().addAll(priceLable,chipsetLabel,memoryLabel,coreClockLabel,boostClockLabel,colorLabel,lengthLabel,imageView);
     }
 
+    @FXML
     public void addElement(){
         if(mainController != null){
             //mainController.addPartToBuild(data);
