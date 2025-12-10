@@ -16,7 +16,7 @@
                     <children>
                         <Label fx:id="partname" text=""/>
                         <Region HBox.hgrow="ALWAYS"/>
-                        <Button fx:id="addPart" text="+Add" onAction="addElement"/>
+                        <Button fx:id="addPart" text="+Add" onAction="#addElement"/>
                     </children>
                 </HBox>
             </graphic>
