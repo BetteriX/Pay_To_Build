@@ -1,136 +1,151 @@
 #!/usr/bin/env python3
 
-import warnings
-import time
-import pypartpicker
-from pypartpicker.errors import CloudflareException, RateLimitException
-import random
-import mac
-import os
-import csv
 import json
-from requests_html import HTMLSession
-
-warnings.simplefilter(action="ignore", category=FutureWarning)
-warnings.filterwarnings("ignore")
-
-# Global client
-client = pypartpicker.Client(no_js=True)
-interface = "wlp1s0"
-ssid = "Telekom-5A4A71"
-
-session = HTMLSession()
-
-with open("headers.json", "r", encoding="utf-8") as f:
-    HEADER_POOL = json.load(f)
+import random
+import undetected_chromedriver as uc
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import csv
+import time
+from urllib.parse import quote_plus
 
 
-def Get_Random_Header():
-    return random.choice(HEADER_POOL)
+class PCPartPickerScraper:
+    def __init__(self, search_query: str, headers_file="headers.json"):
+        self.search_query = search_query
+        self.headers_file = headers_file
+        self.header_pool = self.load_headers()
+        self.product_list = []
 
+    def load_headers(self):
+        with open(self.headers_file, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-def rotate_mac_and_reconnect():
-    """Rotate MAC address and reconnect Wi-Fi."""
-    old_mac = mac.get_current_mac_address(interface)
-    print("[*] Old MAC address:", old_mac)
+    def get_random_header(self):
+        return random.choice(self.header_pool)
 
-    new_mac = mac.get_random_mac_address()
-    mac.change_mac_address(interface, new_mac)
-    print("[+] New MAC address:", new_mac)
+    def scrape_pages(self, max_pages=5):
+        hdr = self.get_random_header()
+        options = uc.ChromeOptions()
 
-    mac.reconnect_wifi(interface, ssid)
-    print("[*] Reconnected Wi-Fi")
+        # Headless mode (uncomment if you want)
+        # options.add_argument("--headless=new")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
 
+        # Disable images & CSS for speed
+        prefs = {
+            "profile.managed_default_content_settings.images": 2,
+            "profile.managed_default_content_settings.stylesheets": 2,
+        }
+        options.add_experimental_option("prefs", prefs)
 
-def safe_get_part(query, region="us", page=1, max_retries=10):
-    """Fetch part info safely with retries and MAC rotation."""
-    global client
-    attempt = 0
+        # Set random user-agent
+        if "User-Agent" in hdr:
+            options.add_argument(f"user-agent={hdr['User-Agent']}")
 
-    while attempt < max_retries:
+        options.add_argument("--disable-blink-features=AutomationControlled")
+
+        driver = uc.Chrome(options=options)
+        html = ""
+
         try:
-            return client.get_part_search(query, region=region, page=page)
+            print("[+] Loading initial search page…")
+            driver.get("https://pcpartpicker.com/search/")
 
-        except (CloudflareException, RateLimitException) as e:
-            attempt += 1
-            print(f"[{type(e).__name__}] Page {page} attempt {attempt}: {e}")
-            rotate_mac_and_reconnect()
-            client = pypartpicker.Client(no_js=True)  # reset client after reconnect
-            sleep_time = random.uniform(10, 20)
-            print(f"Sleeping for {sleep_time:.1f} seconds before retry...")
-            time.sleep(sleep_time)
+            # enter search query in input box
+            search_input = WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "input[type='text']"))
+            )
+            search_input.clear()
+            search_input.send_keys(self.search_query)
+            search_input.send_keys(Keys.ENTER)
+
+            print("[+] Searching...")
+
+            # loop through pages
+            for page in range(1, max_pages + 1):
+                print(f"[+] Loading page {page}...", end="\r")
+                # navigate to next page if page > 1
+                if page > 1:
+                    url_query = quote_plus(self.search_query)
+                    driver.get(
+                        f"https://pcpartpicker.com/search/?q={url_query}&page={page}"
+                    )
+
+                try:
+                    WebDriverWait(driver, 5).until(
+                        EC.presence_of_all_elements_located(
+                            (By.CSS_SELECTOR, "td.td__name a")
+                        )
+                    )
+                except:
+                    pass
+
+                html = driver.page_source
+                self.parse_html(html)
+                time.sleep(1)  # small delay between pages
 
         except Exception as e:
-            attempt += 1
-            print(f"[!] Unexpected error on page {page} attempt {attempt}: {e}")
-            time.sleep(random.uniform(5, 10))
+            print(f"[-] Unexpected error: {e}")
+        finally:
+            driver.quit()
 
-    print(f"[!] Giving up after {max_retries} retries on page {page}")
-    return None
+    def parse_html(self, html):
+        soup = BeautifulSoup(html, "html.parser")
+        products = soup.select("ul.list-unstyled > li")
 
+        for product in products:
+            name_tag = product.select_one(".search_results--link a")
+            img_tag = product.select_one(".search_results--img img")
 
-def scrape_category(name: str, region="us"):
-    """Scrape all pages of a given category and save to CSV."""
-    os.system("clear")
-    page = 1
-    fname = f"{name.lower().replace(' ', '_')}.csv"
-    headers_written = False
+            name = name_tag.text.strip() if name_tag else None
+            img_url = img_tag["src"].strip() if img_tag else None
 
-    try:
-        with open(fname, "w", encoding="utf-8", newline="") as f:
-            writer = None
+            if name and img_url:
+                if img_url.startswith("//"):
+                    img_url = "https:" + img_url
+                if img_url.startswith("/static/forever/img/no-image.png"):
+                    img_url = ""
 
-            while True:
-                result = safe_get_part(name, region=region, page=page)
-                if not result:
-                    print(f"[!] Failed to fetch page {page}, skipping...")
-                    break
+                self.product_list.append({"name": name, "image": img_url})
 
-                print(f"{name}: === Page {page}/{result.total_pages} ===", end="\r")
+    def save_csv(self, filename: str):
+        with open(filename + ".csv", "a", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=["name", "image"])
+            if f.tell() == 0:
+                writer.writeheader()
+            for product in self.product_list:
+                writer.writerow(product)
+        print(f"[+] Saved {len(self.product_list)} products → {filename}.csv")
 
-                for summary in result.parts:
-                    part_name = summary.name
-                    image = summary.image_urls[0] if summary.image_urls else ""
-                    part = client.get_part(summary.url)
-
-                    if not headers_written:
-                        headers = ["Name", "Image URL"] + list(part.specs.keys())
-                        writer = csv.writer(f)
-                        writer.writerow(headers)
-                        headers_written = True
-
-                    row = [part_name, image] + list(part.specs.values())
-                    writer.writerow(row)
-                    f.flush()
-
-                if page >= result.total_pages:
-                    break
-
-                page += 1
-                sleep_time = random.uniform(5, 10)
-                time.sleep(sleep_time)
-
-    except KeyboardInterrupt:
-        print("\n[!] Script stopped by user (Ctrl+C)!")
-    except Exception as e:
-        print(f"[!] Unexpected error while scraping {name}: {e}")
-
-    print(f"\n{name}: Finished scanning. Data saved to {fname}")
+    def run(self, max_pages=5):
+        self.scrape_pages(max_pages=max_pages)
+        if self.product_list:
+            self.save_csv(self.search_query)
+        else:
+            print("[-] No products found.")
 
 
 def main():
     categories = [
         # "Processor",
-        "Memory",
-        # "Internal-Hard-Drive",
-        # "External-Hard-Drive",
-        # "Video-Card",
-        # "Case-Fan",
-        # "Fan-Controller",
+        # "Memory",
+        "MotherBoard",
+        "Internal Hard Drive",
+        "Video Card",
+        "Power Supply",
+        "Case",
+        "Cpu cooler",
     ]
 
     for category in categories:
-        scrape_category(category)
+        scraper = PCPartPickerScraper(category)
+        scraper.run()
 
 
 if __name__ == "__main__":

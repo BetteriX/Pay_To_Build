@@ -1,0 +1,152 @@
+package PayToBuild.App;
+import PayToBuild.Data.*;
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+import java.util.stream.Collectors;
+
+public class CardController {
+    @FXML
+    private AnchorPane cardroot;
+    @FXML
+    private Button addPart;
+    @FXML
+    private VBox carddataroot;
+    @FXML
+    private Label partname;
+
+    CPU _cpu ;
+    Motherboard _motherboard;
+    Memory _memory;
+    VideoCard _videocard;
+    CPUCooler _cpucooler;
+    PSU _psu;
+    Storage _storage;
+    Case _case;
+
+    public void DisplayCase(Case pcCase){
+        this._case = pcCase;
+        partname.setText(pcCase.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcCase.getPrice());
+        Label colorLabel = new Label("Color: " + pcCase.getColor());
+        Label typeLabel = new Label("Type: " + pcCase.getType());
+        Label psuInWattLabel = new Label("Built in power supply watt capacity: " + pcCase.getPsu());
+        Label externalVolumeLabel = new Label("External volume:" + pcCase.getExternal_volume());
+        Label sidePanelLabel = new Label("Side panel type: " + pcCase.getSide_panel());
+        Label internal35bayLabel = new Label("Number of 3.5 bays: " + pcCase.getInternal_35_bays());
+
+        carddataroot.getChildren().addAll(priceLable,colorLabel,typeLabel,psuInWattLabel,externalVolumeLabel,sidePanelLabel,internal35bayLabel);
+    }
+
+    public void DisplayCPU(CPU pcCPU){
+        this._cpu = pcCPU;
+        partname.setText(pcCPU.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcCPU.getPrice());
+        Label coreCountLabel = new Label("Cores: " + pcCPU.getCore_count());
+        Label coreClockLabel = new Label("Core base speed in Hz: " + pcCPU.getCore_clock());
+        Label coreBoostLabel = new Label("Core boost speed in Hz: " + pcCPU.getBoost_clock());
+        Label microArchitectureLabel = new Label("Microarchitecture: " + pcCPU.getMicroarchitecture());
+        Label TDPLabel = new Label("Maximum temperature : " + pcCPU.getTdp());
+        Label graphicLabel = new Label("Built in graphic card: " + pcCPU.getGraphic());
+
+        carddataroot.getChildren().addAll(priceLable,coreCountLabel,coreClockLabel,coreBoostLabel,microArchitectureLabel,TDPLabel,graphicLabel);
+    }
+
+    public void DisplayCPUCooler(CPUCooler pcCPUCooler){
+        this._cpucooler = pcCPUCooler;
+        partname.setText(pcCPUCooler.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcCPUCooler.getPrice());
+        Label RPMLabel = new Label("Fan speed: " + pcCPUCooler.getRpm());
+        Label sizeLabel = new Label("Size in mm: " + pcCPUCooler.getSize());
+        Label noiseLevelLabel = new Label("Noise levels: " + pcCPUCooler.getNoise_level());
+        Label colorLabel = new Label("Color: " + pcCPUCooler.getColor());
+
+        carddataroot.getChildren().addAll(priceLable,RPMLabel,sizeLabel,noiseLevelLabel,colorLabel);
+    }
+
+    public void DisplayMemory(Memory pcMemory){
+        this._memory = pcMemory;
+        partname.setText(pcMemory.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcMemory.getPrice());
+        Label speedLabel = new Label("Memory speed: " + pcMemory.getSpeed());
+        Label moduleLabel = new Label("Module type: " + pcMemory.getModules());
+        Label pricePRgbLabel = new Label("Price/GB: " + pcMemory.getPrice_per_gb());
+        Label colorLabel = new Label("Color: " + String.join(",",pcMemory.getColor()));
+        Label fwLatencyLabel = new Label("FW latency: " + pcMemory.getFirst_word_latency());
+        Label casLatencyLabel = new Label("CAS latency: " + pcMemory.getCas_latency());
+
+        carddataroot.getChildren().addAll(priceLable,speedLabel,moduleLabel,pricePRgbLabel,colorLabel,fwLatencyLabel,casLatencyLabel);
+    }
+
+    public void DisplayMotherboard(Motherboard pcMotherboard){
+        this._motherboard = pcMotherboard;
+        partname.setText(pcMotherboard.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcMotherboard.getPrice());
+        Label socketLabel = new Label("Socket type: " + pcMotherboard.getSocket());
+        Label memorySlotsLabel = new Label("Number of memory slots: " + pcMotherboard.getMemory_slots());
+        Label maxSuppMemoryLabel = new Label("Maximum supported memory in GB: " + pcMotherboard.getMax_memory());
+        Label formFactorLabel = new Label("Form factor: " + pcMotherboard.getForm_factor());
+        Label colorLabel = new Label("Color " + String.join(",",pcMotherboard.getColor()));
+
+        carddataroot.getChildren().addAll(priceLable,socketLabel,memorySlotsLabel,maxSuppMemoryLabel,formFactorLabel,colorLabel);
+    }
+
+    public void DisplayPSU(PSU pcStorge){
+        this._psu = pcStorge;
+        partname.setText(pcStorge.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcStorge.getPrice());
+        Label wattegLabel = new Label("Watt: " + pcStorge.getCapacity_w());
+        Label voltageLabel = new Label("Volt: " + pcStorge.getCapacity_va());
+
+        carddataroot.getChildren().addAll(priceLable,wattegLabel,voltageLabel);
+    }
+
+    public void DisplayStorage(Storage pcStorge){
+        this._storage = pcStorge;
+        partname.setText(pcStorge.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcStorge.getPrice());
+        Label capacityLabel = new Label("Storage size in GB:"+ pcStorge.getCapacity());
+        Label pricePRgbLabel = new Label("Price/GB: " + pcStorge.getPrice_per_gb());
+        Label typeLabel = new Label("Type: " + pcStorge.getType());
+        Label cacheLabel = new Label("Cache: " + pcStorge.getCache());
+        Label formFactorLabel = new Label("Form factor: " + pcStorge.getForm_factor());
+        Label interfaceLabel = new Label("Interfaces: " + pcStorge.getDriveInterface());
+
+        carddataroot.getChildren().addAll(priceLable,capacityLabel,pricePRgbLabel,typeLabel,cacheLabel,formFactorLabel,interfaceLabel);
+    }
+
+    public void DisplayVideoCard(VideoCard pcVideoCard ){
+        this._videocard = pcVideoCard;
+        partname.setText(pcVideoCard.getName());
+        carddataroot.getChildren().clear();
+
+        Label priceLable = new Label("Price: $" + pcVideoCard.getPrice());
+        Label chipsetLabel = new Label("Chipset:"+ pcVideoCard.getChipset());
+        Label memoryLabel = new Label("Memory: " + pcVideoCard.getMemory());
+        Label coreClockLabel = new Label("Core clock: " + pcVideoCard.getCore_clock());
+        Label boostClockLabel = new Label("Boost clock: " + pcVideoCard.getBoost_clock());
+        Label colorLabel = new Label("Color: " + pcVideoCard.getColor());
+        Label lengthLabel = new Label("Length in mm: " + pcVideoCard.getLength());
+
+        carddataroot.getChildren().addAll(priceLable,chipsetLabel,memoryLabel,coreClockLabel,boostClockLabel,colorLabel,lengthLabel);
+    }
+
+}

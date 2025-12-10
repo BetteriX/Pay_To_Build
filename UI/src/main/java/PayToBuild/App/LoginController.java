@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class LoginController {
@@ -44,9 +45,11 @@ public class LoginController {
 
     @FXML
     public void backtomain(MouseEvent event) throws IOException {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
         root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root,screenSize.width,screenSize.height);
         stage.setTitle("MainPage");
         stage.setScene(scene);
         stage.show();
