@@ -1,0 +1,251 @@
+name,price,core_count,core_clock,boost_clock,microarchitecture,tdp,graphics,image
+AMD Ryzen 7 9800X3D,451.5,8,4.7,5.2,Zen 5,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+AMD Ryzen 7 7800X3D,340.05,8,4.2,5.0,Zen 4,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/f0e0e59d75066ec825667b71c31e3c83.256p.jpg
+AMD Ryzen 5 7600X,170.49,6,4.7,5.3,Zen 4,105,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/fd6305088c9d16d59017b380fb9c408a.256p.jpg
+AMD Ryzen 5 9600X,204.99,6,3.9,5.4,Zen 5,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/8a0df381931efb7323f458cfc42260f8.256p.jpg
+AMD Ryzen 7 7700X,242.98,8,4.5,5.4,Zen 4,105,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/6d3fb7600f26fb1e94e8b0c1a99e0bfa.256p.jpg
+AMD Ryzen 9 9950X3D,649.99,16,4.3,5.7,Zen 5,170,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/c091adac8120c424d3fcf03bec914302.256p.jpg
+AMD Ryzen 5 5500,74.22,6,3.6,4.2,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/49fca908d8863ded4df790bd3af6bc12.256p.jpg
+AMD Ryzen 7 9700X,305.89,8,3.8,5.5,Zen 5,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/a0f5a161d8c7ff3c6b0827423537a029.256p.jpg
+AMD Ryzen 5 5600X,158.99,6,3.7,4.6,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/3ef757133d38ac40afe75da691ba7d60.256p.jpg
+AMD Ryzen 5 5600,125.61,6,3.5,4.4,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/49fca908d8863ded4df790bd3af6bc12.256p.jpg
+AMD Ryzen 7 5800X,179.95,8,3.8,4.7,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/9b4cefb2e43f2c358f3a97a31e1be90b.256p.jpg
+Intel Core i7-14700K,297.17,20,3.4,5.6,Raptor Lake Refresh,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c3e5d01cec2fa20b6f47fe8a400c08d6.256p.jpg
+Intel Core i9-14900K,439.0,24,3.2,6.0,Raptor Lake Refresh,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c9117c605854e9387e57cd69ebca2415.256p.jpg
+Intel Core i5-12400F,108.99,6,2.5,4.4,Alder Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/5fe3c9cc8cbaaa4aa52aed7389d2cc10.256p.jpg
+AMD Ryzen 5 3600,79.75,6,3.6,4.2,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/c7baf2c9c9cc15ae23adb24c2f4316fc.256p.jpg
+AMD Ryzen 5 7600,196.97,6,3.8,5.1,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/fd6305088c9d16d59017b380fb9c408a.256p.jpg
+AMD Ryzen 7 5700X,154.99,8,3.4,4.6,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/a0931f2db7bb9c37a199429c85a0d2e1.256p.jpg
+AMD Ryzen 9 7900X,314.11,12,4.7,5.6,Zen 4,170,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/8de723005cfc1b85071c4abf4d76bd4e.256p.jpg
+AMD Ryzen 9 9900X,359.0,12,4.4,5.6,Zen 5,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/8148c56c91723188e32a508682fa9854.256p.jpg
+Intel Core i5-14600K,189.99,14,3.5,5.3,Raptor Lake Refresh,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c8f65245aff45313f03aaad255078883.256p.jpg
+Intel Core Ultra 7 265K,269.99,20,3.9,5.5,Arrow Lake,125,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/19fb12d5828d3ae540e91eefa4160b79.256p.jpg
+AMD Ryzen 7 5700X3D,313.3,8,3.0,4.1,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/7945bbda871bfbf95a9138fd184f4a6e.256p.jpg
+Intel Core i5-14400F,125.99,10,2.5,4.7,Raptor Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/1a89e55daad13315da1822c1630dc26c.256p.jpg
+AMD Ryzen 9 9950X,533.83,16,4.3,5.7,Zen 5,170,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/c091adac8120c424d3fcf03bec914302.256p.jpg
+AMD Ryzen 5 7500F,,6,3.7,5.0,Zen 4,65,,https://cdna.pcpartpicker.com/static/forever/images/product/521c4c2de515ace1e8bb11575e797393.256p.jpg
+AMD Ryzen 7 5800XT,140.0,8,3.8,4.8,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/ce5ffddc2c5a21f074f6abcc6e972249.256p.jpg
+Intel Core Ultra 9 285K,559.99,24,3.7,5.7,Arrow Lake,125,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/d658fbb8695607dc4964431e6b6b9373.256p.jpg
+Intel Core i7-12700K,214.15,12,3.6,5.0,Alder Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/b69e4a2d3dd9f8fac9ed6bf1b631b0ce.256p.jpg
+AMD Ryzen 5 7600X3D,433.5,6,4.1,4.7,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/b684575be6a62b1fe86628cbbbca2ac4.256p.jpg
+AMD Ryzen 5 5600G,134.99,6,3.9,4.4,Zen 3,65,Radeon Vega 7,https://cdna.pcpartpicker.com/static/forever/images/product/1dd09dfdc581be6224a323d49d714c7f.256p.jpg
+AMD Ryzen 7 7700,293.97,8,3.6,5.3,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/6d3fb7600f26fb1e94e8b0c1a99e0bfa.256p.jpg
+Intel Core i5-13400F,151.47,10,2.5,4.6,Raptor Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/17d82d241bff0efdd1c32fbcf9822c14.256p.jpg
+AMD Ryzen 5 7500F,,6,3.7,5.0,Zen 4,65,,https://cdna.pcpartpicker.com/static/forever/images/product/521c4c2de515ace1e8bb11575e797393.256p.jpg
+Intel Core i7-12700KF,174.99,12,3.6,5.0,Alder Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/b69e4a2d3dd9f8fac9ed6bf1b631b0ce.256p.jpg
+AMD Ryzen 9 5900X,254.99,12,3.7,4.8,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/1d7073a2deda3bd22963a7e248bbe3e4.256p.jpg
+AMD Ryzen 7 3700X,142.94,8,3.6,4.4,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/23cd3adfd50037c1b44d6d53edb15248.256p.jpg
+Intel Core i5-12600KF,129.99,10,3.7,4.9,Alder Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/01163d618db9518d03041c9997e23bb1.256p.jpg
+AMD Ryzen 5 8400F,137.57,6,4.2,4.7,Zen 4,65,,https://cdna.pcpartpicker.com/static/forever/images/product/2c2a93ae222699dace151a0f718e21c0.256p.jpg
+AMD Ryzen 5 8500G,152.5,6,4.1,5.0,Zen 4,65,Radeon 740M,https://cdna.pcpartpicker.com/static/forever/images/product/2a87a9a2a5a34b013ae637285470d93a.256p.jpg
+AMD Threadripper 3990X,2699.99,64,2.9,4.3,Zen 2,280,,https://cdna.pcpartpicker.com/static/forever/images/product/7e2e7fecadc261c89c70cf3965a97a28.256p.jpg
+Intel Core i5-12600K,148.19,10,3.7,4.9,Alder Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/01163d618db9518d03041c9997e23bb1.256p.jpg
+AMD Ryzen 7 5700G,174.97,8,3.8,4.6,Zen 3,65,Radeon Vega 8,https://cdna.pcpartpicker.com/static/forever/images/product/f599944d7bed683e57062447764ce9d9.256p.jpg
+AMD Ryzen 9 5950X,274.99,16,3.4,4.9,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/1d7073a2deda3bd22963a7e248bbe3e4.256p.jpg
+AMD Ryzen 7 5800X3D,704.86,8,3.4,4.5,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/f83c6c4ee8cb5a6801f35aae5fc5d018.256p.jpg
+Intel Core i3-12100F,79.45,4,3.3,4.3,Alder Lake,58,,https://cdna.pcpartpicker.com/static/forever/images/product/c67d8f42c0e57b268f068172e9a3f571.256p.jpg
+AMD Ryzen 9 7950X,449.96,16,4.5,5.7,Zen 4,170,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/4f8b13807b9b9e2ab921ddb6e6e81afb.256p.jpg
+Intel Core i5-14600KF,197.98,14,3.5,5.3,Raptor Lake Refresh,125,,https://cdna.pcpartpicker.com/static/forever/images/product/c8f65245aff45313f03aaad255078883.256p.jpg
+AMD Ryzen 5 4500,78.38,6,3.6,4.1,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/e1f3bf613a5651db6f394c8dd41f0f15.256p.jpg
+AMD Ryzen 5 8600G,224.83,6,4.3,5.0,Zen 4,65,Radeon 760M,https://cdna.pcpartpicker.com/static/forever/images/product/d5ae2e9f000a9c994f70e092b05c80ef.256p.jpg
+AMD Ryzen 7 5700,134.96,8,3.7,4.6,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/a0931f2db7bb9c37a199429c85a0d2e1.256p.jpg
+Intel Core i7-14700KF,313.95,20,3.4,5.6,Raptor Lake Refresh,125,,https://cdna.pcpartpicker.com/static/forever/images/product/92061d6108d4c4bf0deb77943506df11.256p.jpg
+Intel Core i9-12900K,285.99,16,3.2,5.2,Alder Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/b9d3c68bbf713cdd1211f3792040ce95.256p.jpg
+Intel Core Ultra 7 265KF,277.44,20,3.9,5.5,Arrow Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/fcf1376b4011b81307f2eb83fb68d582.256p.jpg
+AMD Ryzen 9 9900X3D,539.98,12,4.4,5.5,Zen 5,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/990c9be284c611b84c6a33e9706b1efa.256p.jpg
+AMD Ryzen 9 7950X3D,769.27,16,4.2,5.7,Zen 4,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/4f8b13807b9b9e2ab921ddb6e6e81afb.256p.jpg
+AMD Ryzen 7 8700G,279.0,8,4.2,5.1,Zen 4,65,Radeon 780M,https://cdna.pcpartpicker.com/static/forever/images/product/e5ca60dc2137886fac6e13e30aad8ed9.256p.jpg
+Intel Core i9-14900KF,419.97,24,3.2,6.0,Raptor Lake Refresh,125,,https://cdna.pcpartpicker.com/static/forever/images/product/c9117c605854e9387e57cd69ebca2415.256p.jpg
+Intel Core i7-13700K,390.33,16,3.4,5.4,Raptor Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/2f3405387f23ab827695d966ea9f9682.256p.jpg
+Intel Core i5-10400F,137.44,6,2.9,4.3,Comet Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/e5d8c71ba7c15404b87a7fcdf7251281.256p.jpg
+AMD Ryzen 7 8700F,239.99,8,4.1,5.0,Zen 4,65,,https://cdna.pcpartpicker.com/static/forever/images/product/b6ab2ee57b91c56a92a3da6346e47627.256p.jpg
+AMD Ryzen 5 2600,149.99,6,3.4,3.9,Zen+,65,,https://cdna.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg
+Intel Core i9-14900KS,639.97,24,3.2,6.2,Raptor Lake Refresh,150,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/7f03744e2c593edbbf711b21d85c59b3.256p.jpg
+AMD Ryzen 5 5600GT,135.0,6,3.6,4.6,Zen 3,65,Radeon Vega 7,https://cdna.pcpartpicker.com/static/forever/images/product/7a6babfed0885332f51c70772687fcd1.256p.jpg
+Intel Core i5-13600KF,195.9,14,3.5,5.1,Raptor Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/d151778af9f52d6ab1f9475a0ae84dc0.256p.jpg
+AMD Ryzen 9 5900XT,249.99,16,3.3,4.8,Zen 3,105,,https://cdna.pcpartpicker.com/static/forever/images/product/36739b3a1511a7c493b2f987b43cd144.256p.jpg
+Intel Core i7-14700F,294.58,20,2.1,5.4,Raptor Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/367d869b80f32e8faa3075378677e28e.256p.jpg
+AMD Ryzen 9 7900,342.94,12,3.7,5.4,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/8de723005cfc1b85071c4abf4d76bd4e.256p.jpg
+Intel Core i7-9700K,239.43,8,3.6,4.9,Coffee Lake Refresh,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/3760e89d1820da393f084e2c18a62e3b.256p.jpg
+Intel Core i7-8700K,179.0,6,3.7,4.7,Coffee Lake,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/d7dea28613ac935e748d330d16ffea69.256p.jpg
+AMD Ryzen 3 3200G,73.45,4,3.6,4.0,Zen+,65,Radeon Vega 8,https://cdna.pcpartpicker.com/static/forever/images/product/3567a863156c083a7d4c8fcb7e0dbdac.256p.jpg
+AMD Ryzen 5 3400G,85.08,4,3.7,4.2,Zen+,65,Radeon Vega 11,https://cdna.pcpartpicker.com/static/forever/images/product/43e2914b40ccb9ab7ce39eb656db3b44.256p.jpg
+Intel Core i9-13900K,434.0,24,3.0,5.8,Raptor Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/9ec7bf0f10e60c175e9b64c51bab7240.256p.jpg
+Intel Core i5-12400,143.55,6,2.5,4.4,Alder Lake,65,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/5fe3c9cc8cbaaa4aa52aed7389d2cc10.256p.jpg
+AMD Ryzen 5 3600X,171.97,6,3.8,4.4,Zen 2,95,,https://cdna.pcpartpicker.com/static/forever/images/product/c7baf2c9c9cc15ae23adb24c2f4316fc.256p.jpg
+Intel Core i9-9900K,399.0,8,3.6,5.0,Coffee Lake Refresh,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/76f85d74fb4d0e2cc31f940bee5905c4.256p.jpg
+AMD Ryzen 7 2700X,170.99,8,3.7,4.3,Zen+,105,,https://cdna.pcpartpicker.com/static/forever/images/product/4e84967ef18c9b42e543b58c836d73ef.256p.jpg
+Intel Core i3-14100F,90.05,4,3.5,4.7,Raptor Lake Refresh,58,,https://cdna.pcpartpicker.com/static/forever/images/product/874cc0e600bde06d75755309677a87e2.256p.jpg
+Intel Core i9-12900KF,265.68,16,3.2,5.2,Alder Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/c3d3a6843e0c0a5d98155e9fa68c092c.256p.jpg
+AMD Ryzen 5 5600XT,144.99,6,3.7,4.7,Zen 3,65,,https://cdna.pcpartpicker.com/static/forever/images/product/a010fc03fea2809af2c8fd966fbd483c.256p.jpg
+Intel Core i5-13600K,299.99,14,3.5,5.1,Raptor Lake,125,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/535b5631a223b77657804c8144c1277e.256p.jpg
+Intel Core i7-7700K,151.69,4,4.2,4.5,Kaby Lake,91,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/e466732c63d1d636cf13e256bb7cf5ff.256p.jpg
+AMD Ryzen 3 4100,75.29,4,3.8,4.0,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/43c4d752d1441ed420dd80502e718918.256p.jpg
+Intel Core Ultra 5 245K,259.99,14,4.2,5.2,Arrow Lake,125,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/1e9e70d03e7edd0274691d5f49a34a50.256p.jpg
+AMD Ryzen 3 3100,96.43,4,3.6,3.9,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/614673693f9281d17b521cbf52799c68.256p.jpg
+Intel Core i5-9400F,93.0,6,2.9,4.1,Coffee Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/3b2d769c28b9890779f87a7568887dfc.256p.jpg
+Intel Core i7-13700KF,299.0,16,3.4,5.4,Raptor Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/b2de198020c1bb1bda375064b94e60dc.256p.jpg
+Intel Core i7-10700K,349.0,8,3.8,5.1,Comet Lake,125,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/6a40f9732bef504af112c33a980482b2.256p.jpg
+Intel Core i5-14400,175.98,10,2.5,4.7,Raptor Lake Refresh,65,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/1a89e55daad13315da1822c1630dc26c.256p.jpg
+AMD Ryzen 9 3900X,,12,3.8,4.6,Zen 2,105,,https://cdna.pcpartpicker.com/static/forever/images/product/14adcd1fc88ebf386b746037c966b6af.256p.jpg
+AMD Ryzen 7 7700,393.08,8,3.6,5.3,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/6d3fb7600f26fb1e94e8b0c1a99e0bfa.256p.jpg
+Intel Core i7-6700K,228.96,4,4.0,4.2,Skylake,91,Intel HD Graphics 530,https://cdna.pcpartpicker.com/static/forever/images/product/614a9c530cce56d1fafbc5ba97920ab1.256p.jpg
+AMD Ryzen 7 7800X3D,431.66,8,4.2,5.0,Zen 4,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/f0e0e59d75066ec825667b71c31e3c83.256p.jpg
+AMD Ryzen 9 7900X3D,,12,4.4,5.6,Zen 4,120,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/98c4874ed550e2bbcc2d29d67177ddc8.256p.jpg
+Intel Core i5-11400F,192.0,6,2.6,4.4,Rocket Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/1cd42b90d913aa4fe2338eb376fd3e2d.256p.jpg
+AMD Threadripper 3970X,1714.99,32,3.7,4.5,Zen 2,280,,https://cdna.pcpartpicker.com/static/forever/images/product/f2cacb6e0f6003d798989357654aff3c.256p.jpg
+AMD Ryzen 7 3800X,269.8,8,3.9,4.5,Zen 2,105,,https://cdna.pcpartpicker.com/static/forever/images/product/23cd3adfd50037c1b44d6d53edb15248.256p.jpg
+AMD Ryzen 5 2600X,115.0,6,3.6,4.2,Zen+,95,,https://cdna.pcpartpicker.com/static/forever/images/product/55aea2dd64e2e3a3e3b1d678048d8d76.256p.jpg
+Intel Core i7-12700F,247.0,12,2.1,4.9,Alder Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/1d6c5691988047da895d68961c33fe95.256p.jpg
+Intel Core i5-9600K,166.0,6,3.7,4.6,Coffee Lake Refresh,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/33f96aec821c5c10f4b1fd636a7d1881.256p.jpg
+Intel Core Ultra 5 225F,190.83,10,3.3,4.9,Arrow Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/4ac0c32ed331c672ee51af4d468f3d72.256p.jpg
+Intel Core i7-11700K,293.99,8,3.6,5.0,Rocket Lake,125,Intel UHD Graphics 750,https://cdna.pcpartpicker.com/static/forever/images/product/41358d31a00cc8fb673bfa7716ea9498.256p.jpg
+Intel Core i3-12100,113.58,4,3.3,4.3,Alder Lake,60,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/c67d8f42c0e57b268f068172e9a3f571.256p.jpg
+Intel Core i5-10400,139.99,6,2.9,4.3,Comet Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/e5d8c71ba7c15404b87a7fcdf7251281.256p.jpg
+Intel Core i7-8700,188.47,6,3.2,4.6,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/d7dea28613ac935e748d330d16ffea69.256p.jpg
+Intel Core i3-14100,119.95,4,3.5,4.7,Raptor Lake Refresh,60,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/874cc0e600bde06d75755309677a87e2.256p.jpg
+Intel Core i3-13100F,85.34,4,3.4,4.5,Raptor Lake,58,,https://cdna.pcpartpicker.com/static/forever/images/product/735d84f17256242adcfad88d56d590bf.256p.jpg
+Intel Pentium E5700,14.99,2,3.0,,Wolfdale,65,,https://cdna.pcpartpicker.com/static/forever/images/product/c3e5d01cec2fa20b6f47fe8a400c08d6.256p.jpg
+Intel Core i9-10900K,548.99,10,3.7,5.3,Comet Lake,125,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/b501d68b041d6f48bc11c402012d59cb.256p.jpg
+Intel Core i5-13400,164.05,10,2.5,4.6,Raptor Lake,65,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/17d82d241bff0efdd1c32fbcf9822c14.256p.jpg
+Intel Core i7-7700,102.5,4,3.6,4.2,Kaby Lake,65,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/e466732c63d1d636cf13e256bb7cf5ff.256p.jpg
+Intel Core i7-13700F,255.0,16,2.1,5.2,Raptor Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/e02f59843736d101374f75d18c244a30.256p.jpg
+Intel Core i5-6500,87.13,4,3.2,3.6,Skylake,65,Intel HD Graphics 530,https://m.media-amazon.com/images/I/51LGOgLV8TL.jpg
+AMD Ryzen 5 5500GT,141.92,6,3.6,4.4,Zen 3,65,Radeon Vega 7,https://cdna.pcpartpicker.com/static/forever/images/product/65f2a2e1999cd06b510b8ee145a2c14f.256p.jpg
+Intel Core i9-13900KF,435.0,24,3.0,5.8,Raptor Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/ef583b00501fbe1d9df909c3ffe2b413.256p.jpg
+AMD Ryzen 5 4600G,,6,3.7,4.2,Zen 2,65,Radeon Vega 7,https://cdna.pcpartpicker.com/static/forever/images/product/29ffd579cd750d1f43cba3ba1c578d8c.256p.jpg
+AMD Ryzen 5 9600,467.55,6,3.8,5.2,Zen 5,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/8a0df381931efb7323f458cfc42260f8.256p.jpg
+Intel Core Ultra 5 235,264.99,14,3.4,5.0,Arrow Lake,65,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/e252c9d0aba0219dcae0b0bcd3894808.256p.jpg
+Intel Core i7-4790K,,4,4.0,4.4,Haswell Refresh,88,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51D3J+33JwL.jpg
+Intel Core i5-8400,178.89,6,2.8,4.0,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/066a1b8f33dd5d26a14a4a76eb254032.256p.jpg
+Intel Core i7-6700,123.0,4,3.4,4.0,Skylake,65,Intel HD Graphics 530,https://cdna.pcpartpicker.com/static/forever/images/product/614a9c530cce56d1fafbc5ba97920ab1.256p.jpg
+Intel Core Ultra 5 225,213.01,10,3.3,4.9,Arrow Lake,65,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/4ac0c32ed331c672ee51af4d468f3d72.256p.jpg
+AMD Ryzen 5 3500X,,6,3.6,4.1,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/7f766d0fb14c24f0cd101da14ec6d0a0.256p.jpg
+Intel Core i7-14700,306.55,20,2.1,5.4,Raptor Lake Refresh,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c3e5d01cec2fa20b6f47fe8a400c08d6.256p.jpg
+AMD Ryzen 5 1600 (14nm),115.0,6,3.2,3.6,Zen,65,,https://cdna.pcpartpicker.com/static/forever/images/product/71be15e31e700684bc9c8fb697bd4f11.256p.jpg
+Intel Core i9-11900K,449.0,8,3.5,5.3,Rocket Lake,125,Intel UHD Graphics 750,https://cdna.pcpartpicker.com/static/forever/images/product/eb8ef73f5460ac6ad82f634b2dcf793a.256p.jpg
+Intel Core i7-10700F,325.26,8,2.9,4.8,Comet Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/10ec5737be6d836dd041f66eaa76bcf4.256p.jpg
+Intel Core i3-10100F,100.0,4,3.6,4.3,Comet Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/1b6a8775e713620ebc864fb7bcc38ce5.256p.jpg
+Intel Core i7-11700F,229.99,8,2.5,4.9,Rocket Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/fd3cc64653e9040372bb3570a019e71e.256p.jpg
+Intel Core i5-13500,234.99,14,2.5,4.8,Raptor Lake,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/6afcbca8a6703a4c42dba3d6c4720724.256p.jpg
+Intel Pentium E2220,12.99,2,2.4,,Core,65,,https://images-na.ssl-images-amazon.com/images/I/51jpGWUTAKL.jpg
+Intel Core i7-12700,289.97,12,2.1,4.9,Alder Lake,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/b69e4a2d3dd9f8fac9ed6bf1b631b0ce.256p.jpg
+AMD Ryzen 5 3600,,6,3.6,4.2,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/c7baf2c9c9cc15ae23adb24c2f4316fc.256p.jpg
+Intel Core i5-10600K,174.99,6,4.1,4.8,Comet Lake,125,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/cec5ee818776737baefc9603bdbf9391.256p.jpg
+Intel Core i5-6600K,89.99,4,3.5,3.9,Skylake,91,Intel HD Graphics 530,https://cdna.pcpartpicker.com/static/forever/images/product/39c7a343d00445b6e0e5d54d4b7ed561.256p.jpg
+Intel Core Ultra 9 285,579.99,24,2.5,5.6,Arrow Lake,65,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/d658fbb8695607dc4964431e6b6b9373.256p.jpg
+Intel Core i7-4770K,99.0,4,3.5,3.9,Haswell,84,Intel HD Graphics 4600,https://cdna.pcpartpicker.com/static/forever/images/product/0817a8a69b3fa53b911056cd5c01262e.256p.jpg
+Intel Core i7-3770,98.69,4,3.4,,Ivy Bridge,77,Intel HD Graphics 4000,https://m.media-amazon.com/images/I/51v2JNU0WaL.jpg
+Intel Core i7-10700,399.69,8,2.9,4.8,Comet Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/6a40f9732bef504af112c33a980482b2.256p.jpg
+AMD Ryzen 9 3950X,455.95,16,3.5,4.7,Zen 2,105,,https://cdna.pcpartpicker.com/static/forever/images/product/bb4c0b72e3f78893b1e5b19ab570b2c1.256p.jpg
+Intel Core i3-6100,29.99,2,3.7,,Skylake,51,Intel HD Graphics 530,https://m.media-amazon.com/images/I/51m7931xzhL.jpg
+AMD Threadripper 3960X,1267.0,24,3.8,4.5,Zen 2,280,,https://cdna.pcpartpicker.com/static/forever/images/product/3ada9b0ee52763b884f3f76b681846ad.256p.jpg
+AMD Ryzen 7 2700,161.69,8,3.2,4.1,Zen+,65,,https://cdna.pcpartpicker.com/static/forever/images/product/4e84967ef18c9b42e543b58c836d73ef.256p.jpg
+Intel Core i5-7500,63.0,4,3.4,3.8,Kaby Lake,65,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/af30c4076a25b69d6f721172010cc0ec.256p.jpg
+Intel Core i5-14500,238.09,14,2.6,5.0,Raptor Lake Refresh,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c70c79371c7131082c89348493ae7998.256p.jpg
+Intel Core i7-9700,298.68,8,3.0,4.7,Coffee Lake Refresh,65,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/3760e89d1820da393f084e2c18a62e3b.256p.jpg
+Intel Core Ultra 7 265,374.99,20,2.4,5.3,Arrow Lake,65,Intel Xe,https://cdna.pcpartpicker.com/static/forever/images/product/19fb12d5828d3ae540e91eefa4160b79.256p.jpg
+Intel Core i5-11400,159.99,6,2.6,4.4,Rocket Lake,65,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/1cd42b90d913aa4fe2338eb376fd3e2d.256p.jpg
+Intel Core i9-10850K,,10,3.6,5.2,Comet Lake,125,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/16f496383b11d89632a9edf7ef503aea.256p.jpg
+Intel Core i5-7400,,4,3.0,3.5,Kaby Lake,65,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/0c2441d24af10b2aff285308b4e32d03.256p.jpg
+Intel Core i9-13900KS,429.0,24,3.0,6.0,Raptor Lake,150,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/4129af6f0163dfd9dad75e57aae5a99d.256p.jpg
+Intel Core Ultra 7 265F,269.99,20,2.4,5.3,Arrow Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/c00ff53f4acdc4d3992f146486edf1ff.256p.jpg
+Intel Core i3-8100,60.78,4,3.6,,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/907d3d6fa5bcbf87be2045d806ccadd7.256p.jpg
+Intel Core i7-4790,149.94,4,3.6,4.0,Haswell Refresh,84,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51D3J+33JwL.jpg
+Intel Xeon E5-2699 V4,332.72,22,2.2,3.6,Broadwell,145,,https://m.media-amazon.com/images/I/51u2F5EpIpL.jpg
+Intel Core i5-4690K,54.0,4,3.5,3.9,Haswell Refresh,88,Intel HD Graphics 4600,https://cdna.pcpartpicker.com/static/forever/images/product/93181dc9a768fc9b512a294c4f33cc91.256p.jpg
+Intel Xeon E5-2680 V4,1975.0,14,2.4,3.3,Broadwell,120,,https://cdna.pcpartpicker.com/static/forever/images/product/fe223eeb7f193ce69814603b89175472.256p.jpg
+Intel Core i9-12900KS,379.99,16,3.4,5.5,Alder Lake,150,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/b3fd483f4dc6bc63faff298cdffb41d5.256p.jpg
+AMD Ryzen 7 1700,165.0,8,3.0,3.7,Zen,65,,https://cdna.pcpartpicker.com/static/forever/images/product/d57406e2534cf5ae6cb9141e656374f4.256p.jpg
+Intel Core i5-8600K,327.23,6,3.6,4.3,Coffee Lake,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/aa134167a714bcf301976f148b735237.256p.jpg
+Intel Core i3-10100,99.99,4,3.6,4.3,Comet Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/1b6a8775e713620ebc864fb7bcc38ce5.256p.jpg
+Intel Pentium G640,19.0,2,2.8,,Sandy Bridge,65,Intel HD Graphics,https://m.media-amazon.com/images/I/31aZSgqvw0L.jpg
+Intel Core i9-9900KF,329.0,8,3.6,5.0,Coffee Lake Refresh,95,,https://cdna.pcpartpicker.com/static/forever/images/product/cd59447c1091b738d94fc8ea7b0629c6.256p.jpg
+Intel Core i7-9700F,259.0,8,3.0,4.7,Coffee Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/7fd1b17d82ba2d66a75dd8911b3a3d1b.256p.jpg
+AMD EPYC 4564P,699.99,16,4.5,5.7,Zen 4,170,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+AMD Ryzen 3 2200G,,4,3.5,3.7,Zen,65,Radeon Vega 8,https://cdna.pcpartpicker.com/static/forever/images/product/ad2e56d88c77de3053dcc5dada363f58.256p.jpg
+AMD Ryzen 5 2400G,115.0,4,3.6,3.9,Zen,65,Radeon Vega 11,https://cdna.pcpartpicker.com/static/forever/images/product/320f71912f65606aa2075161dc798c3d.256p.jpg
+Intel Core i5-12500,179.92,6,3.0,4.6,Alder Lake,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/a2eebdda7c48c480719d4cb491f660dc.256p.jpg
+AMD Ryzen 5 5600X3D,,6,3.3,4.4,Zen 3,105,,
+Intel Core i3-9100F,75.0,4,3.6,4.2,Coffee Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/0d74fb44f832ad674549787311aafa0f.256p.jpg
+Intel Core i5-8500,170.0,6,3.0,4.1,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/028ee303e2f6aed00ffa4a750f24b033.256p.jpg
+Intel Core i5-11600K,,6,3.9,4.9,Rocket Lake,125,Intel UHD Graphics 750,https://cdna.pcpartpicker.com/static/forever/images/product/6881ec4618066263cbe6904e95ae9278.256p.jpg
+Intel Core i5-7500T,55.0,4,2.7,3.3,Kaby Lake,35,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i5-4590,,4,3.3,3.7,Haswell Refresh,84,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51vb+UYTxSL.jpg
+AMD Ryzen 5 1600 (12nm),99.0,6,3.2,3.6,Zen+,65,,https://cdna.pcpartpicker.com/static/forever/images/product/2447958ccca245b5827bf05929f870e6.256p.jpg
+AMD Athlon 3000G (14nm),98.79,2,3.5,,Zen,35,Radeon Vega 3,https://cdna.pcpartpicker.com/static/forever/images/product/4cca7584d65df7a4e4b5298805e9552f.256p.jpg
+Intel Core i7-10700KF,245.0,8,3.8,5.1,Comet Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/30a49f42fca8cbf7e1627bf13d37a6e7.256p.jpg
+Intel Core i7-3770K,,4,3.5,,Ivy Bridge,77,Intel HD Graphics 4000,https://m.media-amazon.com/images/I/51YOxrhsT8L.jpg
+AMD Ryzen 9 3900XT,,12,3.8,4.7,Zen 2,105,,https://cdna.pcpartpicker.com/static/forever/images/product/bb4c0b72e3f78893b1e5b19ab570b2c1.256p.jpg
+Intel Core i3-10105F,143.53,4,3.7,4.4,Comet Lake,65,,https://cdna.pcpartpicker.com/static/forever/images/product/104690dc90e6297964380eeb9204f524.256p.jpg
+Intel Core i5-7600,55.8,4,3.5,4.1,Kaby Lake,65,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/02dbd0bb7cefb31a308b7f7ce6bf392e.256p.jpg
+Intel Core i7-9700KF,395.02,8,3.6,4.9,Coffee Lake Refresh,95,,https://cdna.pcpartpicker.com/static/forever/images/product/7a187be50026e221f31b55e76c3adf73.256p.jpg
+Intel Core i7-4770,177.0,4,3.4,3.9,Haswell,84,Intel HD Graphics 4600,https://cdna.pcpartpicker.com/static/forever/images/product/0817a8a69b3fa53b911056cd5c01262e.256p.jpg
+Intel Core i5-3470,95.46,4,3.2,,Ivy Bridge,77,Intel HD Graphics 2500,https://m.media-amazon.com/images/I/51ywEF+YaiL.jpg
+AMD FX-8350,,8,4.0,,Piledriver,125,,https://m.media-amazon.com/images/I/511KbpvD7fL.jpg
+AMD Ryzen 7 3700X,,8,3.6,4.4,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/23cd3adfd50037c1b44d6d53edb15248.256p.jpg
+AMD Ryzen 5 1600X,99.0,6,3.6,4.0,Zen,95,,https://cdna.pcpartpicker.com/static/forever/images/product/62069eabe77fa79c55158028545484f2.256p.jpg
+AMD 2650,,2,1.45,,Jaguar,25,Radeon HD 8240,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i7-11700KF,354.57,8,3.6,5.0,Rocket Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/965ab64fbbbf1a096201650af8b88699.256p.jpg
+Intel Core i3-4150,35.0,2,3.5,,Haswell Refresh,54,Intel HD Graphics 4400,https://m.media-amazon.com/images/I/51aP8famPoL.jpg
+Intel Core i7-11700,377.99,8,2.5,4.9,Rocket Lake,65,Intel UHD Graphics 750,https://cdna.pcpartpicker.com/static/forever/images/product/41358d31a00cc8fb673bfa7716ea9498.256p.jpg
+Intel Core Ultra 5 245KF,284.99,14,4.2,5.2,Arrow Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/86f90b80222ce0831fa4c548b8af3df2.256p.jpg
+Intel Core i7-6950X,,10,3.0,3.5,Broadwell,140,,https://m.media-amazon.com/images/I/511IqL3RMBL.jpg
+Intel Core i5-7600K,182.89,4,3.8,4.2,Kaby Lake,91,Intel HD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/02dbd0bb7cefb31a308b7f7ce6bf392e.256p.jpg
+AMD Ryzen 5 3500,,6,3.6,4.1,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/7f766d0fb14c24f0cd101da14ec6d0a0.256p.jpg
+Intel Core i3-13100,125.25,4,3.4,4.5,Raptor Lake,60,Intel UHD Graphics 730,https://cdna.pcpartpicker.com/static/forever/images/product/735d84f17256242adcfad88d56d590bf.256p.jpg
+Intel Core i9-11900KF,399.0,8,3.5,5.3,Rocket Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/bf7178722382122f3fbf2e53d32e99f6.256p.jpg
+AMD Ryzen 7 1700X,428.88,8,3.4,3.8,Zen,95,,https://cdna.pcpartpicker.com/static/forever/images/product/590d9c982550da4f2f69490c5f9c0902.256p.jpg
+AMD Ryzen 7 3800XT,,8,3.9,4.7,Zen 2,105,,https://cdna.pcpartpicker.com/static/forever/images/product/7d225094c05f3106b9e7aab3873a6631.256p.jpg
+Intel Core i5-9400F,,6,2.9,4.1,Coffee Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/3b2d769c28b9890779f87a7568887dfc.256p.jpg
+Intel Core i7-13700,319.93,16,2.1,5.2,Raptor Lake,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/2f3405387f23ab827695d966ea9f9682.256p.jpg
+AMD Ryzen 3 3300X,110.99,4,3.8,4.3,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/614673693f9281d17b521cbf52799c68.256p.jpg
+Intel Core i9-14900F,499.0,24,2.0,5.8,Raptor Lake Refresh,65,,https://cdna.pcpartpicker.com/static/forever/images/product/9ad5851cc322799cc6c3352f6a899247.256p.jpg
+AMD Ryzen 7 1800X,135.0,8,3.6,4.0,Zen,95,,https://cdna.pcpartpicker.com/static/forever/images/product/a12eab97aff3815b6707805450266034.256p.jpg
+AMD Ryzen 5 3600XT,609.9,6,3.8,4.5,Zen 2,95,,https://cdna.pcpartpicker.com/static/forever/images/product/16ddfc2028922cd20cffaa6976165f84.256p.jpg
+Intel Core i5-4570,98.0,4,3.2,,Haswell,84,Intel HD Graphics 4600,https://cdna.pcpartpicker.com/static/forever/images/product/bbcff392a5e86c2d5268cdd237f70e51.256p.jpg
+AMD Ryzen 5 7600X3D,,6,4.1,4.7,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/b684575be6a62b1fe86628cbbbca2ac4.256p.jpg
+Intel Core i5-11600KF,169.89,6,3.9,4.9,Rocket Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/f9223631f303e54d9bd4aa9967c1f287.256p.jpg
+Intel Core i5-2400,49.99,4,3.1,,Sandy Bridge,95,Intel HD Graphics 2000,https://m.media-amazon.com/images/I/51UxOzy0XpL.jpg
+Intel Core i5-9600KF,169.69,6,3.7,4.6,Coffee Lake Refresh,95,,https://cdna.pcpartpicker.com/static/forever/images/product/658de8a85dd1c0af16b8f020ed5bb2da.256p.jpg
+Intel Core i5-9400,149.94,6,2.9,4.1,Coffee Lake Refresh,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/3b2d769c28b9890779f87a7568887dfc.256p.jpg
+Intel Core i3-10105,99.0,4,3.7,4.4,Comet Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/104690dc90e6297964380eeb9204f524.256p.jpg
+Intel Core i5-4460,68.56,4,3.2,3.4,Haswell Refresh,84,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51m7EsJG9-L.jpg
+AMD Ryzen 3 1200 (14nm),70.0,4,3.1,3.4,Zen,65,,https://cdna.pcpartpicker.com/static/forever/images/product/7714a4b585034b6e4a3f2e230c2806f8.256p.jpg
+AMD Ryzen 5 3600,,6,3.6,4.2,Zen 2,65,,https://cdna.pcpartpicker.com/static/forever/images/product/c7baf2c9c9cc15ae23adb24c2f4316fc.256p.jpg
+Intel Core i5-10600KF,236.92,6,4.1,4.8,Comet Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/d28d05f1c9972e51ef212760baca9612.256p.jpg
+AMD Ryzen 5 1400,79.98,4,3.2,3.4,Zen,65,,https://cdna.pcpartpicker.com/static/forever/images/product/42897d7fd845792aaa6a666396777d04.256p.jpg
+Intel Core i5-6400,,4,2.7,3.3,Skylake,65,Intel HD Graphics 530,https://cdna.pcpartpicker.com/static/forever/images/product/2f07bb4ae8d2d1b223130d6c177bbcc2.256p.jpg
+Intel Core i7-6800K,72.98,6,3.4,3.6,Broadwell,140,,https://cdna.pcpartpicker.com/static/forever/images/product/6a1373e54fbd08524d23f61ac7eb9711.256p.jpg
+Intel Core i5-4570T,49.0,2,2.9,,Haswell,35,Intel HD Graphics 4600,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+AMD Ryzen 5 5600T,160.19,6,3.5,4.5,Zen 3,65,,https://m.media-amazon.com/images/I/31DogRaRuKL.jpg
+Intel Core i7-8700K,255.04,6,3.7,4.7,Coffee Lake,95,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/d7dea28613ac935e748d330d16ffea69.256p.jpg
+AMD Threadripper 2920X,199.1,12,3.5,4.3,Zen+,180,,https://cdna.pcpartpicker.com/static/forever/images/product/e5ec30e5856001c1f713bc38ef99b588.256p.jpg
+Intel Core i3-9100,108.89,4,3.6,4.2,Coffee Lake Refresh,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/0d74fb44f832ad674549787311aafa0f.256p.jpg
+Intel Core i3-7100,36.99,2,3.9,,Kaby Lake,51,Intel HD Graphics 630,https://m.media-amazon.com/images/I/51ar56B-zyL.jpg
+Intel Core i9-10900KF,,10,3.7,5.3,Comet Lake,125,,https://cdna.pcpartpicker.com/static/forever/images/product/02b522d67f1855b6e2916d800eb38bcf.256p.jpg
+Intel Xeon E5-2687W V4,2282.01,12,3.0,3.5,Broadwell,160,,https://cdna.pcpartpicker.com/static/forever/images/product/acbbf09e0391f7599810e37d7ed1f9de.256p.jpg
+AMD FX-6300,,6,3.5,,Piledriver,95,,https://cdna.pcpartpicker.com/static/forever/images/product/d665dacd8ecefc1e5338899c0052dd93.256p.jpg
+Intel Core i9-14900,571.86,24,2.0,5.8,Raptor Lake Refresh,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/c9117c605854e9387e57cd69ebca2415.256p.jpg
+Intel Core i9-9900KS,1389.0,8,4.0,5.0,Coffee Lake Refresh,127,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/127d608f7abf20424afc8464bc416cfa.256p.jpg
+Intel Core i5-9500,198.69,6,3.0,4.4,Coffee Lake Refresh,65,Intel UHD Graphics 630,https://images-eu.ssl-images-amazon.com/images/I/418Vdl99UyL.jpg
+Intel Core i7-2600,189.69,4,3.4,,Sandy Bridge,95,Intel HD Graphics 2000,https://m.media-amazon.com/images/I/511EMznII9L.jpg
+AMD Ryzen 5 1500X,149.99,4,3.5,3.7,Zen,65,,https://cdna.pcpartpicker.com/static/forever/images/product/42897d7fd845792aaa6a666396777d04.256p.jpg
+Intel Core i5-10500,229.95,6,3.1,4.5,Comet Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/bc6d01e56cc2c1813982ca841d3e7ae1.256p.jpg
+Intel Core i9-10980XE,1004.04,18,3.0,4.8,Cascade Lake,165,,https://cdna.pcpartpicker.com/static/forever/images/product/31fa050d67e7b58c6e3b5a1fbdfacf34.256p.jpg
+Intel Core i9-7900X,264.99,10,3.3,4.5,Skylake,140,,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i5-3570K,128.99,4,3.4,,Ivy Bridge,77,Intel HD Graphics 4000,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+AMD Ryzen 9 PRO 7945,,12,3.7,5.4,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/0060e87b1c0093626f67e76793e68c41.256p.jpg
+Intel Core i7-4790K,130.51,4,4.0,4.4,Haswell Refresh,88,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51D3J+33JwL.jpg
+Intel Core i3-4130,41.0,2,3.4,,Haswell,54,Intel HD Graphics 4400,https://cdna.pcpartpicker.com/static/forever/images/product/42a54c308242991186f4f6a3fde7603d.256p.jpg
+Intel Core i5-4690,52.0,4,3.5,3.9,Haswell Refresh,84,Intel HD Graphics 4600,https://m.media-amazon.com/images/I/51vb+UYTxSL.jpg
+Intel Core i5-8400,198.95,6,2.8,4.0,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/066a1b8f33dd5d26a14a4a76eb254032.256p.jpg
+AMD Threadripper 1950X,850.0,16,3.4,4.0,Zen,180,,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i7-5820K,,6,3.3,3.6,Haswell,140,,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i5-6600,,4,3.3,3.9,Skylake,65,Intel HD Graphics 530,https://cdna.pcpartpicker.com/static/forever/images/product/39c7a343d00445b6e0e5d54d4b7ed561.256p.jpg
+Intel Core i7-8700,,6,3.2,4.6,Coffee Lake,65,Intel UHD Graphics 630,https://cdna.pcpartpicker.com/static/forever/images/product/d7dea28613ac935e748d330d16ffea69.256p.jpg
+Intel Celeron G6900,93.71,2,3.4,,Alder Lake,46,Intel UHD Graphics 710,https://cdna.pcpartpicker.com/static/forever/images/product/9741c4e0d5347f8b94409b0414f416db.256p.jpg
+AMD EPYC 4244P,189.33,6,3.8,5.1,Zen 4,65,Radeon,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
+Intel Core i9-13900,414.99,24,2.0,5.6,Raptor Lake,65,Intel UHD Graphics 770,https://cdna.pcpartpicker.com/static/forever/images/product/9ec7bf0f10e60c175e9b64c51bab7240.256p.jpg
+Intel Pentium Gold G7400,90.0,2,3.7,,Alder Lake,46,Intel UHD Graphics 710,https://cdna.pcpartpicker.com/static/forever/images/product/c3e5d01cec2fa20b6f47fe8a400c08d6.256p.jpg
+Intel Core i9-9940X,1950.0,14,3.3,4.4,Skylake,165,,https://cdna.pcpartpicker.com/static/forever/images/product/7e2d17b7b777f8b56e1b5119aa97be20.256p.jpg
