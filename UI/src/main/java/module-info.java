@@ -9,6 +9,8 @@ module org.example.ui {
     requires javafx.base;
     requires java.sql;
     requires io.github.cdimascio.dotenv.java;
+    requires jdk.compiler;
+    requires java.smartcardio;
 
 
     exports PayToBuild.Data;
