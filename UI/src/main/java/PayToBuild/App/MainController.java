@@ -80,45 +80,215 @@ public class MainController {
 
     }
 
-    public void PassData(String s){
-        DataController dc = new DataController();
-        dc.setMainController(this);
-        dc.LoadDataBase(s);
-    }
+
 
     public void expandmainparts(ActionEvent event) {
         mainparts.setExpanded(!mainparts.isExpanded());
     }
 
+    @FXML
     public void swaptocpu(ActionEvent event) throws IOException {
-        PassData("cpu");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("cpu"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptocase(ActionEvent event) throws IOException {
-        PassData("case");
+        //PassData("case");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("case"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptocpucooler(ActionEvent event) throws IOException {
-        PassData("`cpu-cooler`");
+        //PassData("`cpu-cooler`");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("`cpu-cooler`"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptomemory(ActionEvent event) throws IOException {
-        PassData("memory");
+        //PassData("memory");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("memory"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptomotherboard(ActionEvent event) throws IOException {
-        PassData("motherboard");
+        //PassData("motherboard");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("motherboard"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptopsu(ActionEvent event) throws IOException {
-        PassData("ups");
+        //PassData("ups");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("ups"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptostorage(ActionEvent event) throws IOException {
-        PassData("`internal-hard-drive`");
+        //PassData("`internal-hard-drive`");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("`internal-hard-drive`"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void swaptogpu(ActionEvent event) throws IOException {
-        PassData("`video-card`");
+        //PassData("`video-card`");
+        //PassData("`video-card`");
+        // 1. Create FXMLLoader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataPage.fxml"));
+
+        // 2. Load the FXML (returns root node)
+        Parent root = loader.load();
+
+        // 3. Get the controller instance
+        DataController controller = loader.getController();
+
+        // 4. Pass MainController and any other data
+        controller.setMainController(this);
+        controller.loadData("`video-card`"); // e.g., "cpu", "memory", etc.
+
+        // 5. Get current stage
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // 6. Create scene and set stage
+        Scene scene = new Scene(root);
+        stage.setTitle("DataPage");
+        stage.setScene(scene);
+        stage.show();
     }
+
+
+
+
+
 }
