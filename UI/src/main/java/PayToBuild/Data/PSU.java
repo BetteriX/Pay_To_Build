@@ -41,4 +41,17 @@ public class PSU extends PCParts{
         this.capacity_w = capacity_w;
         this.capacity_va = capacity_va;
     }
+
+    @Override
+    public String toString() {
+        return "PSU {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", capacity_w=" + capacity_w + "W" +
+                ", capacity_va=" + capacity_va + "VA" +
+                '}';
+    }
+
+
 }

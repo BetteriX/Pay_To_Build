@@ -69,4 +69,18 @@ public class CPUCooler extends PCParts{
         this.noise_level = noise_level;
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "CPUCooler {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", rpm=" + rpm +
+                ", size=" + size + " mm" +
+                ", noise_level='" + noise_level + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
 }

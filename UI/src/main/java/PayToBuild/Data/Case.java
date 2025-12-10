@@ -93,4 +93,21 @@ public class Case extends PCParts{
         this.side_panel = side_panel;
         this.internal_35_bays = internal_35_bays;
     }
+
+    @Override
+    public String toString() {
+        return "Case {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", url=" + url +
+                ", color='" + color + '\'' +
+                ", type='" + type + '\'' +
+                ", psu=" + psu +
+                ", external_volume=" + external_volume + " L" +
+                ", side_panel='" + side_panel + '\'' +
+                ", internal_35_bays=" + internal_35_bays +
+                '}';
+    }
+
+
 }
