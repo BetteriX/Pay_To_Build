@@ -95,11 +95,11 @@ public class DataController {
                 return_objects = new ArrayList<>(GetData.Get_Case_Data(rs));
                 return return_objects;
             }
-            else if(tableName.equals("cpu-cooler")){
+            else if(tableName.equals("`cpu-cooler`")){
                 return_objects = new ArrayList<>(GetData.Get_CPUCooler_Data(rs));
                 return return_objects;
             }
-            else if(tableName.equals("internal-hard-drive")){
+            else if(tableName.equals("`internal-hard-drive`")){
                 return_objects = new ArrayList<>(GetData.Get_Storage_Data(rs));
                 return return_objects;
             }
@@ -115,7 +115,7 @@ public class DataController {
                 return_objects = new ArrayList<>(GetData.Get_PSU_Data(rs));
                 return return_objects;
             }
-            else if(tableName.equals("video-card")){
+            else if(tableName.equals("`video-card`")){
                 return_objects = new ArrayList<>(GetData.Get_VideoCard_Data(rs));
                 return return_objects;
             }
