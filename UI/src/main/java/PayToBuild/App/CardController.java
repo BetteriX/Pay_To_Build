@@ -6,6 +6,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.stream.Collectors;
 
@@ -19,19 +21,22 @@ public class CardController {
     @FXML
     private Label partname;
 
-    CPU _cpu ;
-    Motherboard _motherboard;
-    Memory _memory;
-    VideoCard _videocard;
-    CPUCooler _cpucooler;
-    PSU _psu;
-    Storage _storage;
-    Case _case;
+    private Object data;
+    private MainController mainController;
+
+
+    public void setMainController(MainController controller){
+        this.mainController = controller;
+    }
 
     public void DisplayCase(Case pcCase){
-        this._case = pcCase;
+        this.data = pcCase;
         partname.setText(pcCase.getName());
         carddataroot.getChildren().clear();
+
+        ImageView imageView = new ImageView(new Image(pcCase.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
 
         Label priceLable = new Label("Price: $" + pcCase.getPrice());
         Label colorLabel = new Label("Color: " + pcCase.getColor());
@@ -45,10 +50,14 @@ public class CardController {
     }
 
     public void DisplayCPU(CPU pcCPU){
-        this._cpu = pcCPU;
+        this.data = pcCPU;
         partname.setText(pcCPU.getName());
         carddataroot.getChildren().clear();
 
+
+        ImageView imageView = new ImageView(new Image(pcCPU.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
         Label priceLable = new Label("Price: $" + pcCPU.getPrice());
         Label coreCountLabel = new Label("Cores: " + pcCPU.getCore_count());
         Label coreClockLabel = new Label("Core base speed in Hz: " + pcCPU.getCore_clock());
@@ -57,15 +66,19 @@ public class CardController {
         Label TDPLabel = new Label("Maximum temperature : " + pcCPU.getTdp());
         Label graphicLabel = new Label("Built in graphic card: " + pcCPU.getGraphic());
 
-        carddataroot.getChildren().addAll(priceLable,coreCountLabel,coreClockLabel,coreBoostLabel,microArchitectureLabel,TDPLabel,graphicLabel);
+        carddataroot.getChildren().addAll(priceLable,coreCountLabel,coreClockLabel,coreBoostLabel,microArchitectureLabel,TDPLabel,graphicLabel,imageView);
     }
 
     public void DisplayCPUCooler(CPUCooler pcCPUCooler){
-        this._cpucooler = pcCPUCooler;
+        this.data = pcCPUCooler;
         partname.setText(pcCPUCooler.getName());
         carddataroot.getChildren().clear();
 
-        Label priceLable = new Label("Price: $" + pcCPUCooler.getPrice());
+        ImageView imageView = new ImageView(new Image(pcCPUCooler.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+
+        Label priceLable = new Label("Price: $" +  pcCPUCooler.getPrice());
         Label RPMLabel = new Label("Fan speed: " + pcCPUCooler.getRpm());
         Label sizeLabel = new Label("Size in mm: " + pcCPUCooler.getSize());
         Label noiseLevelLabel = new Label("Noise levels: " + pcCPUCooler.getNoise_level());
@@ -75,9 +88,13 @@ public class CardController {
     }
 
     public void DisplayMemory(Memory pcMemory){
-        this._memory = pcMemory;
+        this.data = pcMemory;
         partname.setText(pcMemory.getName());
         carddataroot.getChildren().clear();
+
+        ImageView imageView = new ImageView(new Image(pcMemory.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
 
         Label priceLable = new Label("Price: $" + pcMemory.getPrice());
         Label speedLabel = new Label("Memory speed: " + pcMemory.getSpeed());
@@ -91,10 +108,13 @@ public class CardController {
     }
 
     public void DisplayMotherboard(Motherboard pcMotherboard){
-        this._motherboard = pcMotherboard;
+        this.data = pcMotherboard;
         partname.setText(pcMotherboard.getName());
         carddataroot.getChildren().clear();
 
+        ImageView imageView = new ImageView(new Image(pcMotherboard.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
         Label priceLable = new Label("Price: $" + pcMotherboard.getPrice());
         Label socketLabel = new Label("Socket type: " + pcMotherboard.getSocket());
         Label memorySlotsLabel = new Label("Number of memory slots: " + pcMotherboard.getMemory_slots());
@@ -105,22 +125,29 @@ public class CardController {
         carddataroot.getChildren().addAll(priceLable,socketLabel,memorySlotsLabel,maxSuppMemoryLabel,formFactorLabel,colorLabel);
     }
 
-    public void DisplayPSU(PSU pcStorge){
-        this._psu = pcStorge;
-        partname.setText(pcStorge.getName());
+    public void DisplayPSU(PSU pcPSU){
+        this.data = pcPSU;
+        partname.setText(pcPSU.getName());
         carddataroot.getChildren().clear();
 
-        Label priceLable = new Label("Price: $" + pcStorge.getPrice());
-        Label wattegLabel = new Label("Watt: " + pcStorge.getCapacity_w());
-        Label voltageLabel = new Label("Volt: " + pcStorge.getCapacity_va());
+        ImageView imageView = new ImageView(new Image(pcPSU.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        Label priceLable = new Label("Price: $" + pcPSU.getPrice());
+        Label wattegLabel = new Label("Watt: " + pcPSU.getCapacity_w());
+        Label voltageLabel = new Label("Volt: " + pcPSU.getCapacity_va());
 
         carddataroot.getChildren().addAll(priceLable,wattegLabel,voltageLabel);
     }
 
     public void DisplayStorage(Storage pcStorge){
-        this._storage = pcStorge;
+        this.data = pcStorge;
         partname.setText(pcStorge.getName());
         carddataroot.getChildren().clear();
+
+        ImageView imageView = new ImageView(new Image(pcStorge.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
 
         Label priceLable = new Label("Price: $" + pcStorge.getPrice());
         Label capacityLabel = new Label("Storage size in GB:"+ pcStorge.getCapacity());
@@ -134,9 +161,13 @@ public class CardController {
     }
 
     public void DisplayVideoCard(VideoCard pcVideoCard ){
-        this._videocard = pcVideoCard;
+        this.data = pcVideoCard;
         partname.setText(pcVideoCard.getName());
         carddataroot.getChildren().clear();
+
+        ImageView imageView = new ImageView(new Image(pcVideoCard.getUrl().toString()));
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
 
         Label priceLable = new Label("Price: $" + pcVideoCard.getPrice());
         Label chipsetLabel = new Label("Chipset:"+ pcVideoCard.getChipset());
@@ -147,6 +178,12 @@ public class CardController {
         Label lengthLabel = new Label("Length in mm: " + pcVideoCard.getLength());
 
         carddataroot.getChildren().addAll(priceLable,chipsetLabel,memoryLabel,coreClockLabel,boostClockLabel,colorLabel,lengthLabel);
+    }
+
+    public void addElement(){
+        if(mainController != null){
+            //mainController.addPartToBuild(data);
+        }
     }
 
 }
