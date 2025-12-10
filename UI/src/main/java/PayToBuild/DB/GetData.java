@@ -111,7 +111,7 @@ public class GetData {
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
                     imageUrl,
-                    resultSet.getInt("rpm"),
+                    resultSet.getString("rpm"),
                     resultSet.getInt("size"),
                     resultSet.getString("noise_level"),
                     resultSet.getString("color")
@@ -141,7 +141,7 @@ public class GetData {
                     resultSet.getString("name"),
                     resultSet.getFloat("price"),
                     imageUrl,
-                    resultSet.getInt("speed"),
+                    resultSet.getString("speed"),
                     resultSet.getFloat("price_per_gb"),
                     resultSet.getString("modules"),
                     resultSet.getString("color"),

@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CPUCooler extends PCParts{
-    int rpm;
+    String rpm;
     int size;
     String noise_level;
     String color;
 
-    public int getRpm() {
+    public String getRpm() {
         return rpm;
     }
 
-    public void setRpm(int rpm) {
+    public void setRpm(String rpm) {
         this.rpm = rpm;
     }
 
@@ -42,7 +42,7 @@ public class CPUCooler extends PCParts{
         this.color = color;
     }
 
-    public CPUCooler(String name, float price, URL url, int rpm, int size, String noise_level, String color) {
+    public CPUCooler(String name, float price, URL url, String rpm, int size, String noise_level, String color) {
 
         super(name, price, url);
 
@@ -50,13 +50,15 @@ public class CPUCooler extends PCParts{
             color = "";
         }
 
-        if (noise_level == null) {
+        if (noise_level == null|| color.isEmpty()) {
            noise_level = "";
         }
 
-        if (rpm < 0) {
-            rpm = 0;
+
+        if (color == null || color.isEmpty()) {
+            color = "";
         }
+
 
         if (size < 0) {
             size = 0;

@@ -5,18 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Memory extends PCParts{
-    int speed;
+    String speed;
     String modules; //e.g. 2x16GB
     float price_per_gb;
     String color;
     float first_word_latency;
     float cas_latency;
 
-    public int getSpeed() {
+    public String getSpeed() {
         return speed;
     }
 
-    public void setSpeed(int speed) {
+    public void setSpeed(String speed) {
         this.speed = speed;
     }
 
@@ -60,7 +60,7 @@ public class Memory extends PCParts{
         this.cas_latency = cas_latency;
     }
 
-    public Memory(String name, float price, URL url, int speed, float price_per_gb, String modules, String color, float first_word_latency, float cas_latency) {
+    public Memory(String name, float price, URL url, String speed, float price_per_gb, String modules, String color, float first_word_latency, float cas_latency) {
 
         super(name, price, url);
 
@@ -72,8 +72,8 @@ public class Memory extends PCParts{
             color = "";
         }
 
-        if (speed < 0) {
-            speed = 0;
+        if (speed == null || color.isEmpty()) {
+            speed = "";
         }
 
         if (cas_latency < 0) {
