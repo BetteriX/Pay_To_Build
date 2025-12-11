@@ -6,26 +6,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            stylesheets="@Guide.css" fx:controller="PayToBuild.App.GuideController">
+<AnchorPane fx:id="mainroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="PayToBuild.App.GuideController" stylesheets="@Guide.css">
    <children>
-      <Group layoutX="-4.0">
+      <Group layoutX="-18.0" layoutY="-3.0">
          <children>
             <Rectangle fx:id="bcrectangle" arcHeight="5.0" arcWidth="5.0" fill="#949ba1" height="61.0" stroke="BLACK"
-                       strokeType="INSIDE" width="625.0"/>
-            <Button fx:id="guidebutton" layoutX="458.0" layoutY="17.0" mnemonicParsing="false"
-                    onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Guide"/>
-            <Button fx:id="loginbutton" layoutX="539.0" layoutY="17.0" mnemonicParsing="false" onAction="#swaptologin"
-                    onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Log In"/>
-            <Label fx:id="toplabel" layoutX="165.0" layoutY="8.0" onMouseClicked="#backtomain"
-                   onMouseEntered="#changecursor" onMouseExited="#changecursor" prefHeight="44.0" prefWidth="198.0"
-                   text="Pay To Build">
+                       strokeType="INSIDE" width="${mainroot.width+20}"/>
+            <Button fx:id="guidebutton" layoutX="${mainroot.width-149}" layoutY="17.0"
+                    maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" text="Guide"/>
+            <Button fx:id="loginbutton" layoutX="${mainroot.width-68}" layoutY="17.0" mnemonicParsing="false"
+                    onAction="#swaptologin" onMouseEntered="#changecursor" onMouseExited="#changecursor" text="Log In"/>
+            <Label fx:id="toplabel" layoutX="${(mainroot.width/2)-60}" layoutY="9.0" maxHeight="1.7976931348623157E308"
+                   maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0"
+                   prefWidth="282.0" text="Pay To Build"  onMouseClicked="#backtomain" onMouseEntered="#changecursor" onMouseExited="#changecursor">
                <font>
                   <Font name="Cambria" size="35.0"/>
                </font>
             </Label>
          </children>
+      </Group>
+      <Group>
+         <ScrollPane fx:id="guideScroll" layoutX="${(mainroot.width*0.2)}" layoutY="200"  maxHeight="1.7976931348623157E308"
+                     maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${(mainroot.height-300)}" prefWidth="${(mainroot.width*0.6)}">
+            <content>
+               <Label fx:id="guideText" wrapText="true" />
+            </content>
+         </ScrollPane>
       </Group>
    </children>
 </AnchorPane>
