@@ -1,5 +1,6 @@
 package PayToBuild.App;
 
+import PayToBuild.Data.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +13,11 @@ import javafx.scene.control.ScrollBar;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import PayToBuild.App.DataController.*;
-import java.awt.*;
+//import java.awt.*;
 import java.io.IOException;
+
+import javafx.scene.control.Label;
 
 public class MainController {
     private Stage stage;
@@ -48,8 +49,114 @@ public class MainController {
     private Button cpucoolerbutton;
     @FXML
     private Button casebutton;
+    @FXML
+    private Label cpulabel;
+    @FXML
+    private Label memorylabel;
+    @FXML
+    private Label storagelabel;
+    @FXML
+    private Label motherboardlabel;
+    @FXML
+    private Label powersupplylabel;
+    @FXML
+    private Label cpucoolerlabel;
+    @FXML
+    private Label caselabel;
+    @FXML
+    private Label videocardlabel;
 
 
+        @FXML
+        public void refresh() {
+            // Runs automatically each time FXML is loaded
+            if(SaveParts.parts!=null) {
+                if (SaveParts.GetCPUName() != null) {
+                    cpulabel.setText("CPU: " + SaveParts.GetCPUName());
+                    cpulabel.layoutXProperty().set(-220);
+                }
+                else{
+                    cpulabel.setText("CPU");
+                }
+                if (SaveParts.GetCaseName() != null) {
+                    caselabel.setText("Case: " + SaveParts.GetCaseName());
+                    caselabel.layoutXProperty().set(-200);
+                }
+                else{
+                    caselabel.setText("Case");
+                }
+                if (SaveParts.GetGPUName() != null) {
+                    videocardlabel.setText("GPU: " + SaveParts.GetGPUName());
+                    videocardlabel.layoutXProperty().set(-300);
+                }
+                else{
+                    videocardlabel.setText("GPU");
+                }
+                if (SaveParts.GetCPUCoolerName() != null) {
+                    cpucoolerlabel.setText("CPUCooler: " + SaveParts.GetCPUCoolerName());
+                    cpucoolerlabel.layoutXProperty().set(-420);
+                }
+                else{
+                    cpucoolerlabel.setText("CPUCooler");
+                }
+                if (SaveParts.GetMemoryName() != null) {
+                    memorylabel.setText("Memory: " + SaveParts.GetMemoryName());
+                    memorylabel.layoutXProperty().set(-300);
+                }
+                else{
+                    memorylabel.setText("Memory");
+                }
+                if (SaveParts.GetMotherboardName() != null) {
+                    motherboardlabel.setText("MotherBoard: " + SaveParts.GetMotherboardName());
+                    motherboardlabel.layoutXProperty().set(-320);
+                }
+                else{
+                    motherboardlabel.setText("MotherBoard");
+                }
+                if (SaveParts.GetPSUName() != null) {
+                    powersupplylabel.setText("PSU: " + SaveParts.GetPSUName());
+                    powersupplylabel.layoutXProperty().set(-220);
+                }
+                else{
+                    powersupplylabel.setText("PSU");
+                }
+                if (SaveParts.GetStorageName() != null) {
+                    storagelabel.setText("Storage: " + SaveParts.GetStorageName());
+                    storagelabel.layoutXProperty().set(-180);
+                }
+                else{
+                    storagelabel.setText("Storage");
+                }
+
+            }
+            else{
+                return;
+            }
+        }
+
+    public void changeLabelToSelectedPart(Object data){
+        //Function that returns name & type (string)
+
+            if (data instanceof Case c) {
+                SaveParts.SaveCase(c);
+            } else if (data instanceof CPU c) {
+                SaveParts.SaveCpu(c);
+            } else if (data instanceof CPUCooler cooler) {
+                SaveParts.SaveCPUCooler(cooler);
+            } else if (data instanceof Memory memory) {
+                SaveParts.SaveMemory(memory);
+            } else if (data instanceof Motherboard motherboard) {
+                SaveParts.SaveMotherboard(motherboard);
+            } else if (data instanceof VideoCard videoCard) {
+                SaveParts.SaveGPU(videoCard);
+            } else if (data instanceof Storage storage) {
+                SaveParts.SaveStorage(storage);
+            }
+            else if (data instanceof PSU psu) {
+                SaveParts.SavePSU(psu);
+            }
+
+    }
 
     public void swaptoguide(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("GuidePage.fxml"));
@@ -286,6 +393,7 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+
 
 
 

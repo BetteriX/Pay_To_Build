@@ -1,5 +1,6 @@
 package PayToBuild.App;
 
+import PayToBuild.Data.FinalParts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,12 +24,15 @@ import java.io.IOException;
         public void backtomain(MouseEvent event) throws IOException {
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-            root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
+            root = loader.load();
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root,screenSize.width,screenSize.height);
             stage.setTitle("MainPage");
             stage.setScene(scene);
             stage.show();
+            MainController controller = loader.getController();
+            controller.refresh();
         }
 
             @FXML

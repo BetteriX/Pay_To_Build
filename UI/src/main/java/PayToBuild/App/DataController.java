@@ -150,6 +150,7 @@ public class DataController {
                 else if(object instanceof Motherboard motherboard) controller.DisplayMotherboard(motherboard);
                 else if(object instanceof VideoCard videoCard) controller.DisplayVideoCard(videoCard);
                 else if(object instanceof Storage storage) controller.DisplayStorage(storage);
+                else if(object instanceof PSU psu) controller.DisplayPSU(psu);
 
                 dynamiccontainer.getChildren().add(cardNode);
 
@@ -202,13 +203,16 @@ public class DataController {
     @FXML
     public void backtomain(MouseEvent event) throws IOException {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-
-        root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
+        root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        MainController controller = loader.getController();
+
         scene = new Scene(root,screenSize.width,screenSize.height);
         stage.setTitle("MainPage");
         stage.setScene(scene);
         stage.show();
+        controller.refresh();
     }
 
 
