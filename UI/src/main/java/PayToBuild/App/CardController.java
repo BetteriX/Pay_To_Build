@@ -148,7 +148,7 @@ public class CardController {
         Label wattegLabel = new Label("Watt: " + pcPSU.getCapacity_w());
         Label voltageLabel = new Label("Volt: " + pcPSU.getCapacity_va());
 
-        carddataroot.getChildren().addAll(priceLable,wattegLabel,voltageLabel);
+        carddataroot.getChildren().addAll(priceLable,wattegLabel,voltageLabel,imageView);
     }
 
     public void DisplayStorage(Storage pcStorge){
