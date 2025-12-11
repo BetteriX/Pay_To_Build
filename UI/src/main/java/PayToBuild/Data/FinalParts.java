@@ -14,8 +14,8 @@ public class FinalParts {
         return _cpu;
     }
 
-    public void set_cpu(CPU _cpu) {
-        this._cpu = _cpu;
+    public void set_cpu(CPU cpu) {
+        this._cpu = cpu;
     }
 
     public Motherboard get_motherboard() {

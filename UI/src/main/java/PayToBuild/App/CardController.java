@@ -2,16 +2,27 @@ package PayToBuild.App;
 import PayToBuild.Data.*;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.util.stream.Collectors;
 
 public class CardController {
+    private Parent root;
+    private Stage stage;
+    private Scene scene;
     @FXML
     private AnchorPane cardroot;
     @FXML
@@ -180,11 +191,29 @@ public class CardController {
         carddataroot.getChildren().addAll(priceLable,chipsetLabel,memoryLabel,coreClockLabel,boostClockLabel,colorLabel,lengthLabel,imageView);
     }
 
-    @FXML
-    public void addElement(){
+    public void backtomain(javafx.event.ActionEvent e)throws IOException{
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
+        root = loader.load();
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root,screenSize.width,screenSize.height);
+        stage.setTitle("MainPage");
+        MainController controller = loader.getController();
+
+        stage.setScene(scene);
+        stage.show();
+
+        controller.refresh();
+    }
+
+    public void addElement(javafx.event.ActionEvent e) throws IOException{
         if(mainController != null){
-            //mainController.addPartToBuild(data);
+
+            mainController.changeLabelToSelectedPart(data);
+            backtomain(e);
+            System.out.println("Info given");
         }
     }
+
 
 }
